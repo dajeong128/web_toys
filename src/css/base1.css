@@ -4,28 +4,47 @@
 }
 header {
     overflow: hidden;
-    background-color: #FAFAFA
+    background-color: #FAFAFA;
+    height: 100px;
 }
-#logo {
+.logo img {
+    float:left;
+    line-height:10px;
+    margin-top:5px; width:120px; height:40px;
+}
+.logo input {
     float:left;
 }
-#logo input {
-    float:left;
-}
-#search {
+#text {
     overflow: hidden;
 }
-#search input {
+.search-input {
+    position: relative;
     float: left;
-    text-align: center;
+    width: 600px; 
+    height:37px;
+    margin-left: 20px;
+    outline:none;
+    padding: 2px 18px;
 }
-#nav {
+.search-items {
+    position: absolute;
+    right: 650px;
+    top: 30px;
+}
+header form {
+    padding:15px;
+    height: 44px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
     overflow: hidden;
-    width:80%;
-    padding: 0% 0% 0% 8%;
+    width:600px;
+    margin-left: 130px;
     text-align:center;
 }
-#nav li {
+nav li {
     list-style:none;
     float: left;
     width:50px;
@@ -59,9 +78,18 @@ header {
     float:left;
     display:inline-block;
     align:center;
+    padding: 5px;
 }
 #contents2 h3 {
     float:left;
+    width: 158px;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+#contents2 div p {
+    border-top:1px solid lightgrey;
+    padding: 10px 10px;
 }
 #map {
     overflow: hidden;
