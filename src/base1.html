@@ -3,62 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>기초-Google 검색</title>
-  <style>
-    * {margin:0; padding:0;}
-    #header {overflow: hidden;}
-    #logo {float:left;}
-    #logo input {float:left;}
-    #search {overflow: hidden;}
-    #search input {float: left; text-align: center;}
-      #nav {overflow: hidden; width:80%; padding: 0% 0% 0% 8%; text-align:center;}
-      #nav li {list-style:none; float: left; width:50px; height:15px; font-size: 14px; text-align:center;}
-	#wrap {width:1100px; margin:0 auto;}
-	#wrap:after {content:''; display:block; clear:both;}
-	#contents1 {width:70%; vertical-align: middle; font-size: 10px;height:auto; box-sizing:border-box;float:left; display:inline-block;}
-    #contents2 {
-      width:30%; height:auto;
-      border:1px solid lightgrey;
-      box-sizing:border-box;
-      float:left; display:inline-block;
-      align:center;
-    }
-    #contents2 h3 {float:left;}
-
-    #map {overflow: hidden; border: 1px solid lightgrey;}
-    #map div {float: left;}
-    #img {overflow: hidden;}
-    #img div {float:left}
-    p{font-size:14px;}
-    .wrap1 {margin-left:10%;}
-    #vedio {
-      overflow:hideen;
-      width:80%;
-      border:1px solid;
-      border-color:none;
-      border-collapse:collapse;
-      border-radius:30px
-    }
-    .video1, .video2, .video3 {
-      width:230px; height:300px;
-      display: inline-block
-    }
-    #container {font-size:14px;}
-
-    footer {background-color: #F2F2F2; font-size:14px;}
-  </style>
+ 	<link rel="stylesheet" href="css/base1.css">
 </head>
 
 <body>
-  <div id="header" style="background-color: #FAFAFA">
-    <div id="container">
-      <img style="margin-top:5px; width:120px; height:40px;" src="file:///Users/kwondajeong/Documents/과외/logo.png">
-      <input style="width: 600px; height:40px; font-size:20px; type="search" >
+  <header>
+    <form class="search-form">
+      <img style="margin-top:5px; width:120px; height:40px;" src="assets/images/logo.png">
+      <input style="width: 600px; height:40px; font-size:20px;" type="search">
       <input type='button' value="입력도구">
       <input type='button' value="음성검색">
       <input type='button' value="검색">
       <input style="float:right;" type='button' value="로그인">
-      <img style="float:right;" src="file:///Users/kwondajeong/Documents/과외/m.png">
-    </div><!-- container-->
+      <img style="float:right;" src="assets/images/m.png">
+		</form><!-- search-form-->
 
     <div id="nav">
 		<li><a href="#none">전체</a></li>
@@ -70,14 +28,14 @@
 		<li><a href="#none">설정</a></li>
 		<li><a href="#none">도구</a></li>
     </div><!-- nav -->
-  </div><!-- header -->
+  </header><!-- header -->
 
 <div id="wrap">
 	<div id="contents1">
 		<p style="color:grey">검색결과 약 78,600,000개 (0.39초) </p></br>
 
 		<div>
-			<h3><a href="#none">기초 - 위키낱말사전</a><h3>
+			<h3><a href="#none">기초 - 위키낱말사전</a></h3>
 			<p><a href="#none">https://ko.wiktionary.org/wiki/기초</a></br></p>
 			<p>명사[편집]. 명사 1[편집]. 어원: 한자 基礎; 1. 무엇의 바탕이 되는 것. 한국에서 쓰이는 기초 한자. 한국의 자연 과학 연구는 기초가 튼튼하지 못하다. 유의어: 바탕, 토대 ...</p>
 			<p><a href="#none">한국어</a>.<a href="#none">명사</a></p>
@@ -98,12 +56,15 @@
 
 		<h3>기초 관련 이미지</h3>
 		<div id="img">
-			<div style="width:150px; height:120px; margin-right: 1px; border:1px solid; border-color:lightgrey; display: inline-block;"><img style="width:150px; height:120px;" src="./img1.png"></div>
-			<div style="width:150px; height:120px; margin-right: 1px; border:1px solid; border-color:lightgrey; display: inline-block;"><img style="width:150px; height:120px;" src="./img2.png"></div>
-			<div style="width:150px; height:120px; margin-right: 1px; border:1px solid; border-color:lightgrey; display: inline-block;"><img style="width:150px; height:120px;" src="./img3.png"></div>
-			<div style="width:150px; height:120px; margin-right: 1px; border:1px solid; border-color:lightgrey; display: inline-block;"><img style="width:150px; height:120px;" src="./img4.png"></div>
-			<div style="width:150px; height:120px; margin-right: 1px; border:1px solid; border-color:lightgrey; display: inline-block;"><img style="width:150px; height:120px;" src="./img5.png"></div>
-      <br>
+			<ul>
+				<li><img style="width:150px; height:120px;" src="assets/images/img1.png"></li>
+				<li><img style="width:150px; height:120px;" src="assets/images/img2.png"></li>
+				<li><img style="width:150px; height:120px;" src="assets/images/img3.png"></li>
+				<li><img style="width:150px; height:120px;" src="assets/images/img4.png"></li>
+				<li><img style="width:150px; height:120px;" src="assets/images/img5.png"></li>
+			</ul>
+			<br>
+			
 			<a href="#none">기초에 대한 이미지 더보기</a>
 			<a href="#none">이미지신고</a>
 		</div><br>
@@ -115,19 +76,19 @@
 		<h3>동영상</h3>
 		<div id="video">
 			<div class="video1" style="margin-right: 1px; border:1px solid; border-color:lightgrey;">
-			  <div style="width:30%; height:auto;"><img style="width:230px; height:auto;" src="file:///Users/kwondajeong/Documents/과외/v1.png"></div>
+			  <div style="width:30%; height:auto;"><img style="width:230px; height:auto;" src="assets/images/v1.png"></div>
 			  <div style="width:100%; height:auto;">[황세준 탁구클럽]#포핸드 드라이브 기초- 1. 기본 자세 및 하체</div>
 			  <div style="width:100%; height:auto;">Kendra's Language School<br><span style="color:green">YouTube</span> - 2018. 9. 10.</div>
 			</div>
 
 			<div class="video2" style="margin-right: 1px; border:1px solid; border-color:lightgrey;">
-			  <div style="width:30%; height:auto;"><img style="width:230px; height:auto;" src="file:///Users/kwondajeong/Documents/과외/v2.png"></div>
+			  <div style="width:30%; height:auto;"><img style="width:230px; height:auto;" src="assets/images/v2.png"></div>
 			  <div style="width:100%; height:auto;">기초대사량 늘리는 간단한 운동법! [내 몸 사용설명서] 199회 20180407</div>
 			  <div style="width:100%; height:auto;">TVCHOSUN<br><span style="color:green">YouTube</span> - 2018. 4. 7.</div>
 			</div>
 
 			<div class="video3" style="border:1px solid; border-color:lightgrey;">
-			  <div style="width:30%; height:auto;"><img style="width:230px ; height:auto;" src="file:///Users/kwondajeong/Documents/과외/v3.png"></div>
+			  <div style="width:30%; height:auto;"><img style="width:230px ; height:auto;" src="assets/images/v3.png"></div>
 			  <div style="width:100%; height:auto;">집 일상 사용하는 아주 간단한 기초 영어회화 딱 80개</div>
 			  <div style="width:100%; height:auto;">JTBC Entertainment<br><span style="color:green">YouTube</span> - 2014. 8. 13.</div>
 			</div>
@@ -166,7 +127,7 @@
 	<div id="contents2">
 		<h3>기초</h3>
 		<div>
-			<img src="file:///Users/kwondajeong/Documents/과외/c1.jpeg">
+			<img src="assets/images/c1.jpeg">
 			<p>기초는 구조물에서 힘을 지반으로 전달하여 구조물을 안전하게 지탱하는 기능을 가진 구조를 말한다. 다른 용어로는 하부구조라고도 불리며, 건축물 본체를 상부구조라고 한다. 또 구조물의 기초를 만드는 공사를 기초공사라고 한다. <a href="#none">위키백과</a>
 			<br><a href="#none">사용자 의견</a></p>
 		</div>

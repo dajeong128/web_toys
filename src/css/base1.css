@@ -1,0 +1,113 @@
+* {
+    margin:0; 
+    padding:0;
+}
+header {
+    overflow: hidden;
+    background-color: #FAFAFA
+}
+#logo {
+    float:left;
+}
+#logo input {
+    float:left;
+}
+#search {
+    overflow: hidden;
+}
+#search input {
+    float: left;
+    text-align: center;
+}
+#nav {
+    overflow: hidden;
+    width:80%;
+    padding: 0% 0% 0% 8%;
+    text-align:center;
+}
+#nav li {
+    list-style:none;
+    float: left;
+    width:50px;
+    height:15px;
+    font-size: 14px;
+    text-align:center;
+}
+#wrap {
+    width:1100px;
+    margin:0 auto;
+}
+#wrap:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+#contents1 {
+    width:70%;
+    vertical-align: middle;
+    font-size: 10px;
+    height:auto;
+    box-sizing:border-box;
+    float:left;
+    display:inline-block;
+}
+#contents2 {
+    width:30%;
+    height:auto;
+    border:1px solid lightgrey;
+    box-sizing:border-box;
+    float:left;
+    display:inline-block;
+    align:center;
+}
+#contents2 h3 {
+    float:left;
+}
+#map {
+    overflow: hidden;
+    border: 1px solid lightgrey;
+}
+
+#map div {
+    float: left;
+}
+#img {
+    overflow: hidden;
+}
+#img div {
+    float:left
+}
+p{
+    font-size:14px;
+}
+.wrap1 {
+    margin-left:10%;
+}
+#vedio {
+overflow:hidden;
+width:80%;
+border:1px solid;
+border-color:none;
+border-collapse:collapse;
+border-radius:30px
+}
+.video1, .video2, .video3 {
+width:230px;
+    height:300px;
+display: inline-block;
+}
+#container {
+    font-size:14px;
+}
+li { 
+    width:150px; 
+    height:120px;
+    margin-right: 1px;
+    border:1px solid lightgrey;
+    display: inline-block;
+    }
+
+footer {
+    background-color: #F2F2F2; 
+    font-size:14px;
+}
