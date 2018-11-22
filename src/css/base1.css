@@ -69,7 +69,6 @@ nav li {
     height:auto;
     box-sizing:border-box;
     float:left;
-    display:inline-block;
 }
 
 
@@ -88,9 +87,7 @@ nav li {
     height:auto;
     border:1px solid lightgrey;
     box-sizing:border-box;
-    float:left;
     display:inline-block;
-    align:center;
     padding: 5px;
     margin-left: 46px;
     margin-top: 50px;
