@@ -18,6 +18,7 @@ header {
 #text {
     overflow: hidden;
 }
+
 .search-input {
     position: relative;
     float: left;
@@ -53,8 +54,8 @@ nav li {
     text-align:center;
 }
 #wrap {
-    width:1100px;
-    margin:0 auto;
+    width:1107px;
+    margin:10px auto;
 }
 #wrap:after {
     content:'';
@@ -62,7 +63,7 @@ nav li {
     clear:both;
 }
 #contents1 {
-    width:55%;
+    width:62%;
     vertical-align: middle;
     font-size: 10px;
     height:auto;
@@ -70,8 +71,20 @@ nav li {
     float:left;
     display:inline-block;
 }
+
+
+#contents1 h3 {
+    font-size:17px;
+    font-weight:normal;
+}
+
+#contents1 a {
+    text-decoration:none;
+}
+
+
 #contents2 {
-    width:40%;
+    width:33%;
     height:auto;
     border:1px solid lightgrey;
     box-sizing:border-box;
@@ -80,6 +93,7 @@ nav li {
     align:center;
     padding: 5px;
     margin-left: 46px;
+    margin-top: 50px;
 
 }
 #contents2 h3 {
@@ -87,6 +101,7 @@ nav li {
     width: 158px;
     line-height: 50px;
     margin-left: 10px;
+    margin-top: 35px;
 }
 
 #contents2 div p {
@@ -114,28 +129,35 @@ p{
     margin-left:10%;
 }
 #vedio {
-overflow:hidden;
-width:80%;
-border:1px solid;
-border-color:none;
-border-collapse:collapse;
-border-radius:30px
+    overflow:hidden;
+    width:80%;
+    border:1px solid;
+    border-color:none;
+    border-collapse:collapse;
+    border-radius:30px
 }
 .video1, .video2, .video3 {
-width:230px;
+    width:198px;
     height:300px;
-display: inline-block;
+    display: inline-block;
+    border:1px solid lightgrey;
+
 }
 #container {
     font-size:14px;
 }
 li { 
-    width:150px; 
-    height:120px;
+    width:130px; 
+    height:96px;
     margin-right: 1px;
     border:1px solid lightgrey;
     display: inline-block;
     }
+
+#img ul li img {
+    width:130px;
+    height:94px;
+}
 
 footer {
     background-color: #F2F2F2; 
