@@ -17,7 +17,7 @@ header {
 }
 #text {
     overflow: hidden;
-}
+}   
 
 .search-input {
     position: relative;
@@ -133,12 +133,20 @@ p{
     border-collapse:collapse;
     border-radius:30px
 }
-.video1, .video2, .video3 {
+.video1 {
     width:198px;
     height:300px;
     display: inline-block;
     border:1px solid lightgrey;
-
+    margin-right: 1px;
+    
+}
+.video2 {
+    width:198px;
+    height:300px;
+    display: inline-block;
+    border:1px solid lightgrey;
+    border:1px solid lightgrey;
 }
 #container {
     font-size:14px;
