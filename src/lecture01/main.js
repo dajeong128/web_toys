@@ -24,7 +24,3 @@ var sticky = navbar.offsetTop;
       navbar.classList.remove("fixed-navbar");
     }
   }
-
-
-
-
