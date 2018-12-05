@@ -24,12 +24,12 @@
 
     <nav>
 			<div>
-				<li><a href="#none">전체</a></li>
-				<li><a href="#none">이미지</a></li>
-				<li><a href="#none">동영상</a></li>
-				<li><a href="#none">뉴스</a></li>
-				<li><a href="#none">지도</a></li>
-				<li><a href="#none">더보기</a></li>
+				<li><a href="#none">전체</a><div class="transparent-border"></div></li>
+				<li><a href="#none">이미지</a><div class="transparent-border"></div></li>
+				<li><a href="#none">동영상</a><div class="transparent-border"></div></li>
+				<li><a href="#none">뉴스</a><div class="transparent-border"></div></li>
+				<li><a href="#none">지도</a><div class="transparent-border"></div></li>
+				<li><a href="#none">더보기</a><div class="transparent-border"></div></li>
 			</div>
 			<div>
 				<li><a href="#none">설정</a></li>
@@ -63,7 +63,7 @@
 		</div></br>
 
 		<h3>기초 관련 이미지</h3>
-		<div id="img">
+		<div id="img" class="search-result-imgs">
 			<ul>
 				<li><img src="assets/images/img1.png"></li>
 				<li><img src="assets/images/img2.png"></li>
@@ -83,24 +83,26 @@
 
 		<h3>동영상</h3>
 		<div id="video">
-			<div class="video1">
-			  <div class="v1"><img style="width:197px; height:112px;" src="assets/images/v1.png"></div>
-			  <div class="v2">[황세준 탁구클럽]#포핸드 드라이브 기초- 1. 기본 자세 및 하체</div>
-			  <div class="v2">Kendra's Language School<br><span style="color:green">YouTube</span> - 2018. 9. 10.</div>
+				<ul>
+					<li>
+						<img style="width:197px; height:112px;" src="assets/images/v1.png">
+						<p>[황세준 탁구클럽]#포핸드 드라이브 기초- 1. 기본 자세 및 하체</p>
+						<p>Kendra's Language School<br>
+							<span style="color:green">YouTube</span> - 2018. 9. 10.
+						</p>
+					</li>
+					<li>
+							<img style="width:197px; height:112px;" src="assets/images/v2.png">
+							<p>기초대사량 늘리는 간단한 운동법! [내 몸 사용설명서] 199회 20180407</p>
+							<p>TVCHOSUN<br><span style="color:green">YouTube</span> - 2018. 4. 7.</p>
+					</li>
+					<li>
+							<img style="width:197px; height:112px;" src="assets/images/v3.png">
+							<p>집 일상 사용하는 아주 간단한 기초 영어회화 딱 80개</p>
+							<p>JTBC Entertainment<br><span style="color:green">YouTube</span> - 2014. 8. 13.</p>
+					</li>
+				</ul>
 			</div>
-
-			<div class="video1">
-			  <div class="v1"><img style="width:197px; height:112px;" src="assets/images/v2.png"></div>
-			  <div class="v2">기초대사량 늘리는 간단한 운동법! [내 몸 사용설명서] 199회 20180407</div>
-			  <div class="v2">TVCHOSUN<br><span style="color:green">YouTube</span> - 2018. 4. 7.</div>
-			</div>
-
-			<div class="video2" >
-			  <div ><img style="width:197px; height:112px;" src="assets/images/v3.png"></div>
-			  <div >집 일상 사용하는 아주 간단한 기초 영어회화 딱 80개</div>
-			  <div >JTBC Entertainment<br><span style="color:green">YouTube</span> - 2014. 8. 13.</div>
-			</div>
-		</div><!-- video -->
 
 		<div class="d1">
 		  <h3><a href="#none">기초공학 - 위키백과, 우리 모두의 백과사전</a></h3>
@@ -143,11 +145,23 @@
 
 
 </div><!-- wrap -->
-</body>
 
 <footer>
-  <span style=" margin-left:9%">대한민국 ㅣ </span><span style="font-weight:bold;">서울특별시 경기도</span> - IP 주소에서 가져옴 - 정확한 위치 사용 - 자세히 알아보기<br>
-  <span style=" margin-left:9%"><a href="#none">도움말</a><a href="#none">의견</a><a href="#none">보내기</a><a href="#none">개인정보처리방침약관</a></span></span>
-</footer>
+		<div class="footer-wrap">
+			<div class="footer-address">
+				<span>대한민국 ㅣ</span><span style="font-weight:bold;">서울특별시 경기도</span> - IP 주소에서 가져옴 - 정확한 위치 사용 - 자세히 알아보기<br>
+			</div>
+		</div>
+		<div class="footer-border"></div>
+		<div class="footer-wrap">
+			<div class="footer-contact">
+				<span><a href="#none">도움말</a><a href="#none">의견</a><a href="#none">보내기</a><a href="#none">개인정보처리방침약관</a></span></span>
+			</div>
+		</div>
+		</div>
+	</footer>
+	<script src="js/base1.js"></script>
+</body>
+
 
 </html>
