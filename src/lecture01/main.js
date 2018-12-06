@@ -13,9 +13,6 @@ window.addEventListener('scroll', function(event) {
 })
 
 
-
-
-
 window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
