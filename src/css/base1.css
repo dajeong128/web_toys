@@ -49,11 +49,28 @@ nav li {
     list-style:none;
     float: left;
     width:50px;
-    height:15px;
+    height:24px;
     font-size: 14px;
     text-align:center;
 }
-#wrap {
+nav li a {
+    text-decoration: none;
+    padding-bottom:4px;
+}
+nav li a:hover ~ .transparent-border {
+    visibility: visible;
+    opacity:1;
+}
+nav li .transparent-border {
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:3px;
+    background-color:steelblue;
+    margin-top:4px;
+    transition: all 0.3s ease-out;
+}
+#wrap, footer{
     width:1107px;
     margin:10px auto;
 }
@@ -113,11 +130,22 @@ nav li {
 #map div {
     float: left;
 }
-#img {
+.search-result-imgs {
     overflow: hidden;
 }
-#img div {
+.search-result-imgs div {
     float:left
+}
+.search-result-imgs ul li {
+    width:130px;
+    height:94px;
+    margin-right: 1px;
+    border:1px solid lightgrey;
+    display: inline-block;
+}
+.search-result-imgs ul li img{
+    width:100%;
+    height:100%;
 }
 p{
     font-size:14px;
@@ -125,15 +153,28 @@ p{
 .wrap1 {
     margin-left:10%;
 }
-#vedio {
-    overflow:hidden;
+#video {
+    /* overflow:hidden;
     width:80%;
     border:1px solid;
     border-color:none;
     border-collapse:collapse;
-    border-radius:30px
+    border-radius:30px */
 }
-.video1 {
+#video ul li {
+    border: 1px solid gainsboro;
+    display:inline-block;
+    list-style:none;
+    width:28.5%;
+    margin-right:5px;
+}
+#video ul li p {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin:5px;
+}
+/* .video1 {
     width:198px;
     height:300px;
     display: inline-block;
@@ -147,24 +188,22 @@ p{
     display: inline-block;
     border:1px solid lightgrey;
     border:1px solid lightgrey;
-}
+} */
 #container {
     font-size:14px;
 }
-li { 
-    width:130px; 
-    height:96px;
-    margin-right: 1px;
-    border:1px solid lightgrey;
-    display: inline-block;
-    }
-
-#img ul li img {
-    width:130px;
-    height:94px;
+footer .footer-wrap {
+    width:1107px;
+    margin:10px auto;
+    padding:10px 0;
 }
-
 footer {
-    background-color: #F2F2F2; 
     font-size:14px;
+    width:100%;
+    background-color: #FAFAFA
+}
+footer .footer-border {
+    width:100%;
+    height:1px;
+    background-color:gainsboro;
 }
