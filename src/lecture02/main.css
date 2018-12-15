@@ -1,0 +1,31 @@
+html body {
+    background-color: black;
+    color:white;
+    height:100%;
+}
+
+[data-movie-person] {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%) translateY(-50%);
+    text-align: center;
+}
+
+[data-search]   {
+    position: absolute;
+    top :40px;
+    right: 20px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+}
