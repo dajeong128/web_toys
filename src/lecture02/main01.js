@@ -15,7 +15,7 @@ let data;
 function getMoviePerson(searchValue) {
   // window.location.href = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=b0cac97aa508433ca9835e54ab51d7cd&peopleNm=' + searchValue;
   const req = new XMLHttpRequest();
-  req.open('GET', 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=b0cac97aa508433ca9835e54ab51d7cd&peopleNm=' + searchValue, true);
+  req.open('GET', 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json?key=b0cac97aa508433ca9835e54ab51d7cd&peopleNm=' +searchValue, true);
   req.onreadystatechange = function (aEvt) {
     if (req.readyState === 4) {
       if (req.status === 200) {
