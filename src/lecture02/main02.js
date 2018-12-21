@@ -20,25 +20,27 @@ function getMoviePerson(searchValue) {
       const filmos = person.filmoNames;
       console.log(filmos);
       const filmosEl = document.querySelector('[data-filmos] h3');
-      
 
-       
-        const strItem =  filmos.split('|')
-        const size = 3;
-        const filmosSort = [];
 
-        var newArray = new Array(Math.ceil(strItem.length / size)).fill("").map(function() {
-            return this.splice(0, size) }, strItem.slice());  
-        
-        for (i=0; i<newArray.length; i++) {
-            filmosSort.push(strItem[i]);
-        }  
-        
-        filmosEl.innerHTML = `${filmosSort}\n`
-        console.log(newArray)
-        // filmosEl.innerHTML = newArray;
 
-        
+      const strItem = filmos.split('|')
+      const size = 3;
+      const filmosSort = [];
+
+      var newArray = new Array(Math.ceil(strItem.length / size)).fill("").map(function () {
+        return this.splice(0, size)
+      }, strItem.slice());
+
+      // for (i = 0; i < newArray.length; i++) {
+      //   filmosSort.push(strItem[i]);
+      // }
+
+      filmosEl.innerHTML = newArray.map((item) => {
+        return item.map((value) => `<span">${value}</span>`)
+      }).join('<br>')
+      // filmosEl.innerHTML = newArray;
+
+
     })
 }
 
@@ -57,6 +59,6 @@ searchInput.addEventListener('keydown', function (e) {
 
 const formEl = document.querySelector('[data-input-form]');
 formEl.addEventListener('submit', function (e) {
-    findMoviePerson();
-    e.preventDefault();
+  findMoviePerson();
+  e.preventDefault();
 })
