@@ -1,0 +1,61 @@
+html,body {
+    background-color: black;
+    color:white;
+    height:100%;
+}
+
+[data-task-management] {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+@keyframes fadeIn {
+    0% { filter: brightness(0)}
+    50% { filter: brightness(1)}
+    100% {filter:brightness(0.5)}
+}
+
+[data-bg] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    filter:brightness(0.5);
+    animation-name: fadeIn;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    
+}
+
+[data-clock] [data-time] {
+    font-size: 12rem;
+}
+
+[data-clock] {
+    z-index:1;
+}
+[data-name] {
+    z-index:1;
+}
+
+[data-name] input {
+    background-color : transparent;
+    outline: none;
+    padding: 10px;
+    font-size: 40px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    color: white;
+}
+
+[data-name] h1 {
+    font-size: 40px;Í
+}
+
+[data-name] input::placeholder {
+    color:#ccc;
+}
