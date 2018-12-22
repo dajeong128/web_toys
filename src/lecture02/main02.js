@@ -36,7 +36,7 @@ function getMoviePerson(searchValue) {
       // }
 
       filmosEl.innerHTML = newArray.map((item) => {
-        return item.map((value) => `<span">${value}</span>`)
+        return item.map((value) => `<span>${value}</span>`)
       }).join('<br>')
       // filmosEl.innerHTML = newArray;
 
