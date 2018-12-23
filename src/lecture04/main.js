@@ -42,6 +42,23 @@ const init = () => {
     }
 }
 
+const todoToday = () => {
+    const todoInput = document.querySelector('[data-todo] input')
+    const todoContainer = document.querySelector('[data-todo]')
+    const todo = localStorage.getItem('todo');
+    if (todo && todo.length > 0) {
+        todoContainer.innerHTML = `<h1>${todo}</h1>`
+    } else {
+        todoInput.addEventListener('keydown', (event)=> {
+            if (event.key === 'Enter') {
+                localStorage.setItem('todo', todoInput.value);
+                todoContainer.innerHTML = `<h1>${todoInput.value}</h1>`;
+            }
+        })
+    }
+}
+
+
 init ();
 getCurrentTime();
 getRandomBackgroundImage();
