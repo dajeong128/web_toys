@@ -1,34 +1,28 @@
+const getCurrentTime = () => {
 
 
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
 
 
+    function setDate() { const now = new Date();
 
-    const getCurrentTime = () => {
-
-
-        const currentTime = new Date();
-        const hours = currentTime.getHours();
-        const minutes = currentTime.getMinutes();
-        const seconds = currentTime.getSeconds();
-
-
-        function setDate() { const now = new Date();
-            const seconds = now.getSeconds();
-            const secondsDegrees = ((seconds / 60) * 360) + 90; secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-            const mins = now.getMinutes();
-            const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90; minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-            const hour = now.getHours();
-            const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90; hourHand.style.transform = `rotate(${hourDegrees}deg)`; setInterval(setDate, 1000); setDate(); }
+        if( hours> 12 ) hours= hours- 12; {
         
+        var dh = ( hours * 30 ) + ( minutes * 0.5 );
+        dh = parseInt( dh );
+        var dm = minutes * 6;
+        var ds = seconds * 6;
 
-            const secondHand = document.querySelector('[data-second]');
-            const minsHand = document.querySelector('[data-minute]');
-            const hourHand = document.querySelector('[data-hour]');
-    
-            
-            secondHand.innerHTML = secondsDegrees;
-            minsHand.innerHTML = minsDegrees;
-            hourHand.innerHTML = hourDegrees;
+     
+        document.querySelector('[data-hour]').style.WebkitTransform.innerHTML = "rotate(" + dh + "deg)";
+        document.querySelector('[data-minute]').style.WebkitTransform.innerHTML = "rotate(" + dm + "deg)";
+        document.querySelector('[data-second]').style.WebkitTransform.innerHTML = "rotate(" + ds + "deg)";
 
 
+
+        }
     }
+}
