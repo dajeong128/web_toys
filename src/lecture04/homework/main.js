@@ -1,13 +1,13 @@
 const getCurrentTime = () => {
 
 
-    const currentTime = new Date();
-    const hours = currentTime.getHours();
-    const minutes = currentTime.getMinutes();
-    const seconds = currentTime.getSeconds();
 
 
-    function setDate() { const now = new Date();
+    const move = () => {     
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const seconds = currentTime.getSeconds();
 
         if( hours> 12 ) hours= hours- 12; {
         
@@ -17,10 +17,11 @@ const getCurrentTime = () => {
         var ds = seconds * 6;
 
      
-        document.querySelector('[data-hour]').style.WebkitTransform.innerHTML = "rotate(" + dh + "deg)";
-        document.querySelector('[data-minute]').style.WebkitTransform.innerHTML = "rotate(" + dm + "deg)";
-        document.querySelector('[data-second]').style.WebkitTransform.innerHTML = "rotate(" + ds + "deg)";
+        document.querySelector('[data-hour]').style.WebkitTransform = "rotate(" + dh + "deg)";
+        document.querySelector('[data-minute]').style.WebkitTransform = "rotate(" + dm + "deg)";
+        document.querySelector('[data-second]').style.WebkitTransform = "rotate(" + ds + "deg)";
 
+        var timer = setInterval( function(){ digital(); }, 1000);
 
 
         }
