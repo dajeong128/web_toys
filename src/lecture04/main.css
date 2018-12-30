@@ -78,7 +78,32 @@ html,body {
     color: white;
 }
 
-.hand {
-    width:300px;
-    height:20px;
-    text-align:center; }
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: transparent;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}  
+
+  ul li:hover {
+    background: #ddd;
+  }
+
+
+  .close {
+    position: relative;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: red;
+    color: white;
+  }

@@ -42,23 +42,46 @@ const init = () => {
     }
 }
 
-const todoToday = () => {
-    const todoInput = document.querySelector('[data-todo] input')
-    const todoContainer = document.querySelector('[data-todo]')
-    const todo = localStorage.getItem('todo');
-    if (todo && todo.length > 0) {
-        todoContainer.innerHTML = `<h1>${todo}</h1>`
-    } else {
-        todoInput.addEventListener('keydown', (event)=> {
-            if (event.key === 'Enter') {
-                localStorage.setItem('todo', todoInput.value);
-                todoContainer.innerHTML = `<h1>${todoInput.value}</h1>`;
-            }
-        })
-    }
-}
-
-
 init ();
 getCurrentTime();
 getRandomBackgroundImage();
+
+function newItem() {
+    var item = document.getElementById("input").value;
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(item));
+    ul.appendChild(li);
+    document.getElementById("input").value = "";
+    li.onclick = removeItem;
+  }
+  
+  document.body.onkeyup = function(e) {
+    if (e.keyCode == 13) {
+      newItem();
+    }
+  };
+  
+  function removeItem(e) {
+    e.target.parentElement.removeChild(e.target);
+  }
+
+
+  var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
+}

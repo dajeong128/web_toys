@@ -3,7 +3,6 @@ const getCurrentTime = () => {
 
 
 
-    const move = () => {     
         const currentTime = new Date();
         const hours = currentTime.getHours();
         const minutes = currentTime.getMinutes();
@@ -25,5 +24,5 @@ const getCurrentTime = () => {
 
 
         }
-    }
+    
 }
