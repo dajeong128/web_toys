@@ -1,28 +1,20 @@
-const getCurrentTime = () => {
-
-
-
-
-        const currentTime = new Date();
-        const hours = currentTime.getHours();
-        const minutes = currentTime.getMinutes();
-        const seconds = currentTime.getSeconds();
-
-        if( hours> 12 ) hours= hours- 12; {
-        
-        var dh = ( hours * 30 ) + ( minutes * 0.5 );
-        dh = parseInt( dh );
-        var dm = minutes * 6;
-        var ds = seconds * 6;
-
-     
-        document.querySelector('[data-hour]').style.WebkitTransform = "rotate(" + dh + "deg)";
-        document.querySelector('[data-minute]').style.WebkitTransform = "rotate(" + dm + "deg)";
-        document.querySelector('[data-second]').style.WebkitTransform = "rotate(" + ds + "deg)";
-
-        var timer = setInterval( function(){ digital(); }, 1000);
-
-
-        }
+setInterval(function(){
+    var date = new Date();
+    updateTime(date);
+    updateClock(date);
+  }, 1000);
+  
+  function updateClock(date){
+    var secHand = document.querySelector(".sec-hand").style;
+    var minHand = document.querySelector(".min-hand").style;
+    var hrHand = document.querySelector(".hr-hand").style;
     
-}
+    secHand.transform = "rotate(" + date.getSeconds() * 6 + "deg)";
+    minHand.transform = "rotate(" + date.getMinutes() * 6 + "deg)";
+    hrHand.transform = "rotate(" + (date.getHours() * 30 + date.getMinutes() * 0.5) + "deg)";
+  }
+  
+  function updateTime(date){
+    var timeDiv = document.querySelector("#time");
+    timeDiv.innerHTML.hidden = true;
+  }
