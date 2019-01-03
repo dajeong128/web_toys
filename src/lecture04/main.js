@@ -47,41 +47,44 @@ getCurrentTime();
 getRandomBackgroundImage();
 
 function newItem() {
-    var item = document.getElementById("input").value;
-    var ul = document.getElementById("list");
-    var li = document.createElement("li");
+    const item = document.getElementById("input").value;
+    const ul = document.getElementById("list");
+    const li = document.createElement("li");
     li.appendChild(document.createTextNode(item));
-    ul.appendChild(li);
     document.getElementById("input").value = "";
+    ul.appendChild(li);
+
     li.onclick = removeItem;
   }
   
-  document.body.onkeyup = function(e) {
-    if (e.keyCode == 13) {
+  document.body.onkeyup = function(ev) {
+    if (ev.keyCode == 13) {
       newItem();
     }
   };
   
-  function removeItem(e) {
-    e.target.parentElement.removeChild(e.target);
+  function removeItem(ev) {
+    ev.target.parentElement.removeChild(ev.target);
   }
 
 
-  var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+  var close = document.getElementsByClassName("close");
 
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
+for (const i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         var div = this.parentElement;
         div.style.display = "none";
     }
 }
+
+//   var myNodelist = document.getElementsByTagName("LI");
+
+// for (const i = 0; i < myNodelist.length; i++) {
+//   var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   myNodelist[i].appendChild(span);
+// }
+
+

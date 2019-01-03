@@ -31,9 +31,9 @@
       position: relative;
       padding: 2rem;
       box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
-      inset 0 0 0 3px #EFEFEF,
-      inset 0 0 10px black,
-      0 0 10px rgba(0, 0, 0, 0.2);
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     .clock-face {
@@ -52,21 +52,53 @@
       top: 50%;
       transition: transform 0.5s;
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
 
+
+
+    #sec-hand {
+      width: 1px;
+      height: 50%;
+      background-color: black;
+      transform-origin: 50% 80%;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+    }
+
+    #min-hand {
+      width: 3px;
+      height: 40%;
+      background-color: blue;
+      transform-origin: 50% 80%;
+      position: absolute;
+      top: 18%;
+      left: calc(50% - 1px);
+    }
+
+    #hr-hand {
+      width: 5px;
+      height: 25%;
+      background-color: red;
+      transform-origin: 50% 80%;
+      position: absolute;
+      top: 30%;
+      left: calc(50% + -2px);
     }
   </style>
 </head>
 
 <body>
+  <div id="time"></div><br>
   <div class="clock">
     <div class="clock-face">
-      <div class="hand" data-hour></div>
-      <div class="hand" data-minute></div>
-      <div class="hand" data-second></div>
+      <div id="hr-hand" data-hour></div>
+      <div id="min-hand" data-minute></div>
+      <div id="sec-hand" data-second></div>
     </div>
   </div>
 
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 
 </body>
 

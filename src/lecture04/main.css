@@ -97,7 +97,7 @@ ul li {
 
 
   .close {
-    position: relative;
+    position: absolute;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
@@ -107,3 +107,4 @@ ul li {
     background-color: red;
     color: white;
   }
+  
