@@ -51,17 +51,17 @@ function newItem() {
     const ul = document.getElementById("list");
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(item));
-    document.getElementById("input").value = "";
     ul.appendChild(li);
+    document.getElementById("input").value = "";
+
 
     li.onclick = removeItem;
   }
   
-  document.body.onkeyup = function(ev) {
-    if (ev.keyCode == 13) {
+  item.addEventListener('keydown', (e)=> {
+    if (e.key === 'Enter') {
       newItem();
-    }
-  };
+    };
   
   function removeItem(ev) {
     ev.target.parentElement.removeChild(ev.target);
