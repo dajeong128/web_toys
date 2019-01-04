@@ -51,17 +51,20 @@ function newItem() {
     const ul = document.getElementById("list");
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(item));
-    ul.appendChild(li);
     document.getElementById("input").value = "";
-
+    ul.appendChild(li);
 
     li.onclick = removeItem;
   }
   
-  item.addEventListener('keydown', (e)=> {
-    if (e.key === 'Enter') {
-      newItem();
-    };
+
+  (input).addEventListener('keydown', function (ev) {
+    if (ev.keyCode === 13) {
+        newItem();
+    }
+  })
+
+
   
   function removeItem(ev) {
     ev.target.parentElement.removeChild(ev.target);
@@ -87,5 +90,3 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   }
 }
-
-
