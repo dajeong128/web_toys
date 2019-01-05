@@ -38,9 +38,15 @@ html,body {
 [data-clock] {
     z-index:1;
 }
+
 [data-name] {
     z-index:1;
 }
+
+[data-todo] {
+    z-index:1;
+}
+
 
 [data-name] input {
     background-color : transparent;
@@ -50,12 +56,59 @@ html,body {
     border:none;
     border-bottom: 1px solid #ccc;
     color: white;
+    text-align:center;
 }
 
 [data-name] h1 {
-    font-size: 40px;Í
+    font-size: 40px;
 }
 
-[data-name] input::placeholder {
+[data-name], [data-todo] input::placeholder {
     color:#ccc;
+    text-align:center;
 }
+
+[data-todo] input {
+    background-color : transparent;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    color: white;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 50px 12px 50px;
+    background: transparent;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}  
+
+  ul li:hover {
+    background: #ddd;
+  }
+
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    z-index:1;
+
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+    z-index:1;
+  }
+ 

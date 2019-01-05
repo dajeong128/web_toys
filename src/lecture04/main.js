@@ -45,3 +45,47 @@ const init = () => {
 init ();
 getCurrentTime();
 getRandomBackgroundImage();
+
+function newItem() {
+    const item = document.getElementById("input").value;
+    const ul = document.getElementById("list");
+    const li = document.createElement("li");
+    li.appendChild(document.createTextNode(item));
+    document.getElementById("input").value = "";
+    ul.appendChild(li);
+
+    li.onclick = removeItem;
+  }
+  
+  document.body.onkeyup = function(ev) {
+    if (ev.keyCode == 13) {
+      newItem();
+    }
+  };
+  
+  function removeItem(ev) {
+    ev.target.parentElement.removeChild(ev.target);
+  }
+
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+

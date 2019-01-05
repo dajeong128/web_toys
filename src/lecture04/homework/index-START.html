@@ -44,7 +44,7 @@
       /* account for the height of the clock hands */
     }
 
-    .hand {
+    /* .hand {
       width: 100%;
       height: 6px;
       background: linear-gradient(to right, black 51%, transparent 49%);
@@ -52,51 +52,53 @@
       top: 50%;
       transition: transform 0.5s;
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    } */
 
+    .hr-hand {
+      background: #000;
+      height: 20%;
+      left: 48.75%;
+      position: absolute;
+      top: 30%;
+      transform-origin: 50% 100%;
+      width: 2.5%;
+    }
+
+    .min-hand {
+      background: #000;
+      height: 40%;
+      left: 49%;
+      position: absolute;
+      top: 10%;
+      transform-origin: 50% 100%;
+      width: 2%;
+    }
+
+    .sec-hand {
+      background: red;
+      height: 45%;
+      left: 49.5%;
+      position: absolute;
+      top: 14%;
+      transform-origin: 50% 80%;
+      width: 1%;
+      z-index: 8;
     }
   </style>
 </head>
 
 <body>
+  <div id="time"></div><br>
   <div class="clock">
     <div class="clock-face">
-      <div class="hand" data-hour></div>
-      <div class="hand" data-minute></div>
-      <div class="hand" data-second></div>
+      <div class="hr-hand" data-hour></div>
+      <div class="min-hand" data-minute></div>
+      <div class="sec-hand" data-second></div>
     </div>
   </div>
 
-  <script>
-    /*
-      [1]시침이 현재 시간에 맞게 가르키도록 한다.
-      [1-1]현재 시간의 시침 각도를 계산해 css: rotator 효과를 준다.
-      [2]분침이 현재 시간에 맞게 가르키도록 한다.
-      [3]초침이 현재 시간에 맞게 가르키도록 한다.
-    */
-    let hoursBar = document.querySelector('.hand[data-hour]')
-    let minutesBar = document.querySelector('.hand[data-minute]')
-    let secondsBar = document.querySelector('.hand[data-second]')
+  <script src="main.js"></script>
 
-    function setDate() {
-      const currentDate = new Date()
-      const defaultDegree = 90
-
-      let hours = currentDate.getHours()
-      let hoursDegrees = (hours / 12) * 360 + defaultDegree
-      hoursBar.style.transform = `rotate(${hoursDegrees}deg)`
-
-      let minutes = currentDate.getMinutes()
-      let minutesDegrees = (minutes / 60) * 360 + defaultDegree
-      minutesBar.style.transform = `rotate(${minutesDegrees}deg)`
-
-      let seconds = currentDate.getSeconds()
-      let secondsDegrees = (seconds / 60) * 360 + defaultDegree
-      secondsBar.style.transform = `rotate(${secondsDegrees}deg)`
-    }
-
-    setInterval(setDate, 1000)
-
-  </script>
 </body>
 
 </html>

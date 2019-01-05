@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
     <section data-task-management>
         <div data-bg></div>
@@ -15,12 +17,18 @@
             <h1 data-time>16:34</h1>
         </div>
         <div data-name>
-            <input type="text" autofocus placeholder = "Type your name"></input>
+            <input type="text" autofocus placeholder="Type your name"></input>
         </div>
-           
-        <div data-todo></div>
+
+        <div data-todo>
+            <input type="text" id="input" placeholder="Write to do"></input>
+        </div>
+        <div>
+            <ul id="list"></ul>
+        </div>
 
     </section>
     <script src="main.js"></script>
 </body>
+
 </html>
