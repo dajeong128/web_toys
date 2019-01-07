@@ -4,9 +4,6 @@ html, body {
     color:white;
 }
 
-body header:not(.title) {
-    display: flex;
-}
 
 .goods-contents {
     width: 100%;
@@ -24,6 +21,7 @@ body header:not(.title) {
 }
 
 .title {
+    width: 100%;
     height:100px;
     text-align: center;
     display:flex;
@@ -32,3 +30,9 @@ body header:not(.title) {
     font-size: 35px;
     margin-top: 70px;
 }
+
+.goods-shippingPrice {
+    color: grey;
+    font-size: 14px;    
+}
+

@@ -11,7 +11,7 @@ const keepInCart = e => {
       }).showToast();
 }
 
-const instance = axios.create({
+const instance = axios.create({ 
     baseURL: 'https://goods-204a7.firebaseio.com/'
 })
 
@@ -46,7 +46,7 @@ instance.get('goods.json')
                 </select>
                 <p class="goods-seller">${data[key].provider}</p>
                 <p class="goods-price">${data[key].price.toLocaleString()}원</p>
-                <span class="goods-shippingPrice">+${data[key].shipping.price.toLocaleString()}원</span>
+                <span class="goods-shippingPrice"> +배송료 ${data[key].shipping.price.toLocaleString()}원</span>
                 <i class="fas fa-cart-plus" style="float:right; cursor:pointer;" onclick="keepInCart(event)"></i>
              </li>
             `)
@@ -54,3 +54,5 @@ instance.get('goods.json')
         ul.innerHTML = items.join('');
 
     });
+
+    
