@@ -51,4 +51,6 @@ html, body {
     align-items: center;
     width: auto;
     margin: auto;
+    cursor:pointer;
 }
+

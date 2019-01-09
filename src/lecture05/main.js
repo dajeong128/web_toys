@@ -55,4 +55,6 @@ instance.get('goods.json')
 
     });
 
-    
+    function openCartList() {
+        window.open("http://localhost:3006/src/lecture05/shoppingCart/shoppingCart.html");
+      }
