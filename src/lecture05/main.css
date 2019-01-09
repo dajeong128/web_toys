@@ -36,7 +36,7 @@ html, body {
 }
 
 .nav {
-    width:230px;
+    width:233px;
     height:60px;
     background-color:grey;
     display:flex;
@@ -53,12 +53,21 @@ html, body {
     margin: auto;
     cursor:pointer;
     background-color:grey;
-    padding:0 10px 0 10px;
+    padding:0 11px 0 11px;
+}
+
+.goods-list {
+    background-color: white;
+    color:black;
+    width: auto;
+    height:60px;
+    display:flex;
 }
 
 
 .nav li:hover {
-    background-color: lightgrey;
+    background-color: white;
+    color:black;
     width: auto;
     height:60px;
     display:flex;
