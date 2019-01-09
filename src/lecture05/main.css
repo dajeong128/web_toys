@@ -52,5 +52,15 @@ html, body {
     width: auto;
     margin: auto;
     cursor:pointer;
+    background-color:grey;
+    padding:0 10px 0 10px;
 }
 
+
+.nav li:hover {
+    background-color: lightgrey;
+    width: auto;
+    height:60px;
+    display:flex;
+
+}
