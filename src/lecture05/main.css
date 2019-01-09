@@ -28,7 +28,6 @@ html, body {
     align-items:center;
     justify-content: center;
     font-size: 35px;
-    margin-top: 50px;
 }
 
 .goods-shippingPrice {
@@ -36,3 +35,20 @@ html, body {
     font-size: 14px;    
 }
 
+.nav {
+    width:230px;
+    height:60px;
+    background-color:grey;
+    display:flex;
+    list-style: none;
+    float:right;
+    border-bottom:4px solid white;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+.goods-list , .shopping-cart , .order-list {
+    align-items: center;
+    width: auto;
+    margin: auto;
+}

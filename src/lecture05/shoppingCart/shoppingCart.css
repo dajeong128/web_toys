@@ -16,14 +16,13 @@ html, body {
     margin-bottom: 50px;
 }
 
-.goods-contentsInCart {
+.goods-contentsInCart-list {
     width: 500px;
     height: 200px;
     background-color: white;
     text-align: center;
     justify-content: center;
     margin: auto;
-
 }
 
 .goods-contentsInCart ul li {
