@@ -23,6 +23,7 @@ html, body {
     text-align: center;
     justify-content: center;
     margin: auto;
+
 }
 
 .goods-contentsInCart ul li {
@@ -61,10 +62,25 @@ html, body {
 
 
 .nav li:hover {
-    background-color: white;
+    background-color: lightgrey;
     color:black;
     width: auto;
     height:60px;
     display:flex;
+}
 
+.shooping-cart-list {
+    text-align: center;
+    display:flex;
+    width: 500px;
+    height:150px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 2px 2px 10px #aaaaaa;
+    background-color: white;
+    margin:auto;
+}
+
+a {
+    text-decoration: none;
+    color:white;
 }

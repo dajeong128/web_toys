@@ -42,7 +42,7 @@ html, body {
     display:flex;
     list-style: none;
     float:right;
-    border-bottom:4px solid white;
+    border-bottom:4px solid grey;
     align-items: center;
     margin:0;
     padding:0;
@@ -52,7 +52,6 @@ html, body {
     width: auto;
     margin: auto;
     cursor:pointer;
-    background-color:grey;
     padding:0 11px 0 11px;
 }
 
@@ -71,5 +70,9 @@ html, body {
     width: auto;
     height:60px;
     display:flex;
+}
 
+a{
+    text-decoration: none;
+    color:white;
 }
