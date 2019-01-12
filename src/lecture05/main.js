@@ -34,33 +34,30 @@ instance.get('goods.json')
                 ${options.join('')};
                 </select>
                 <p class="goods-seller">${data[key].provider}</p>
-
+                <p class="goods-price">${data[key].price.toLocaleString()}원</p>
+                <span class="goods-shippingPrice"> +배송료 ${data[key].shipping.price.toLocaleString()}원</span>
                 <i class="fas fa-cart-plus" style="float:right; cursor:pointer;" onclick="keepInCart(event)"></i>
              </li>
             `)
         }
         ul.innerHTML = items.join('');
 
-        const dataKey = data[key];
-        const goodsValue = [
-            dataKey.name,
-            dataKey.provider,
-            dataKey.price,
-            optionList[id],
-            optionListId.color,
-            optionListId.size,
-            optionListId.stock,
-            dataKey.shipping.price
-            ]
+        // const dataKey = data[key];
+        // const goodsValue = [
+        //     dataKey.name,
+        //     dataKey.provider,
+        //     dataKey.price,
+        //     optionList[id],
+        //     optionListId.color,
+        //     optionListId.size,
+        //     optionListId.stock,
+        //     dataKey.shipping.price
+        //     ]
     });
-
-function openCartList() {
-    window.open("http://localhost:3006/src/lecture05/shoppingCart/shoppingCart.html");
-}
 
 
 const keepInCart = e => {
-
+    instance.post('cart.json', )
     axios({
         method: 'post',
         url: 'https://goods-204a7.firebaseio.com/goods/getShoppingData',
