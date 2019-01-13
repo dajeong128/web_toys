@@ -69,7 +69,7 @@ html, body {
     display:flex;
 }
 
-.shopping-cart-list {
+body div {
     text-align: center;
     display:flex;
     width: 500px;
@@ -77,11 +77,13 @@ html, body {
     border: 1px solid #BFBFBF;
     box-shadow: 2px 2px 10px #aaaaaa;
     background-color: white;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 30px;
     color:black;
 }
 
-.shopping-cart-list li{
+body div li{
     text-align:left;
     list-style: none;
     margin-left:20px;
