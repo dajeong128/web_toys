@@ -69,18 +69,28 @@ html, body {
     display:flex;
 }
 
-.shooping-cart-list {
+.shopping-cart-list {
     text-align: center;
     display:flex;
     width: 500px;
-    height:150px;
+    height:170px;
     border: 1px solid #BFBFBF;
     box-shadow: 2px 2px 10px #aaaaaa;
     background-color: white;
     margin:auto;
+    color:black;
+}
+
+.shopping-cart-list li{
+    text-align:left;
+    list-style: none;
+    margin-left:20px;
+    margin-top:10px;
+    align-items: center;
+
 }
 
 a {
     text-decoration: none;
-    color:white;
+    color:white;    
 }
