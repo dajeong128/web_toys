@@ -8,30 +8,51 @@ instance.get('cart.json')
     const dataValue = Object.keys(data);
     console.log(dataValue.length);
 
-      for (var i = 0; i<dataValue.length; i++) {
-        if (dataValue.length >  0) {
+    for (var i = 0; i < dataValue.length; i++) {
+      if (dataValue.length > 0) {
         const addList = document.createElement("div")
         const contents = document.querySelector('.goods-contents');
         addList.className = 'shoppingCartList';
 
-        contents.appendChild(addList)        
-        }
+        contents.appendChild(addList)
       }
+    }
 
-    // const list = document.querySelector('.shopping-cart-list')
-    const items = [];
-    items.push(`
-    <li>
-        <p class="goods-name">상품명 : </p>
-        <p class="goods-option">색깔 : / 사이즈 : </p>
-        <p class="goods-price">가격 : </p>
-        <span class="goods-shippingPrice"> +배송료 원</span>
-    </li>
-    `)
+    const items=[];
+
+    const value = Object.values(data)
+    // console.log(Object.values(value));
+    value.forEach( value => console.log(value) );
+  
+    // value.forEach (items.push)
+
+    // // const list = document.querySelector('.shopping-cart-list')
+    // for (var i = 0; i < dataValue.length; i++) {
+    //   if (dataValue.length > 0) {
+        
+        
+    //     const product = [];
+    //     // var newProduct = {
+    //     //   product_id: null,
+    //     //   product_color: null,
+    //     //   product_size: null,
+    //     //   product_qty: 0,
+    //     //   product_price: 0.00,
+    //     // };
+    //     // newProduct.product_id = productID;
+    //     // newProduct.product_desc = product_desc;
+    //     // newProduct.product_qty = qty;
+    //     // newProduct.product_price = price;
+
+
+    //     // products.push(newProduct);
+    //   }
+    // }
+
 
     // list.innerHTML = items.join('');
 
 
   })
 
-  
+
