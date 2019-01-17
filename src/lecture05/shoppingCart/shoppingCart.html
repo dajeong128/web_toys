@@ -7,20 +7,20 @@
     <title>Shopping Cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="shoppingCart.css" />
-    <script src="shoppingCart.js"></script>
 </head>
 
 <body>
     <ul class="nav">
-        <li class="goods-list" onclick="openGoodsList()">상품목록</li>
+        <a href = "../index.html">
+        <li class="goods-list" >상품목록</li></a>
         <li class="shopping-cart">장바구니</li>
         <li class="order-list">주문목록</li>
     </ul>
     <header class="title">We hope your good shopping!</header>
-    <section class="goods-contentsInCart">
-        <ul class="goods-items"></ul>
-    </section>
-
+    <section class = "goods-contents"></section>
+    <!-- <div id = "shoppingCartList" ></div> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="shoppingCart.js"></script>
 </body>
 
 </html>

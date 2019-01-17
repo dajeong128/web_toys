@@ -92,4 +92,3 @@ function removeItem(ev) {
     ev.target.parentElement.remove();
     // ev.target.parentElement.removeChild(close.target);
 }
-
