@@ -7,7 +7,8 @@ instance.get('cart.json')
     // debugger;
     const data = res.data;
     const dataValue = Object.keys(data);
-    console.log(dataValue.length);
+    /*데이터의 갯수*/
+    // console.log(dataValue.length);
 
     /*post 데이터 수만큼 shoppingCartList div 추가 */
     for (var i = 0; i < dataValue.length; i++) {
@@ -23,26 +24,57 @@ instance.get('cart.json')
         var value = Object.values(data)
 
         var getdata = [];
-        
+
         for (var i = 0; i < dataValue.length; i++) {
-          if (dataValue.length > 0) {        
+          if (dataValue.length > 0) {
             getdata.push(`
             <div class ="shoppingCartList">
-              <p>${value[i].name}</p><br>
-              <p>색깔 : ${value[i].options.color} + / + 사이즈 : ${value[i].options.size} </p>
-              <p>가격 : ${value[i].price}</p>
-              <p>+배송료 ${value[i].shipping.method}</p>
+              <div class = "cardList">
+                
+                <p>상품명 : ${value[i].name}</p>
+                <p>색깔 : ${value[i].options.color} / 사이즈 : ${value[i].options.size} </p>
+                <p>가격 : ${value[i].price.toLocaleString()}원<br><span style = "color:grey; font-size: 13px;">+배송료 ${value[i].shipping.price.toLocaleString()}원</span></p>
+              </div>
+              <div class="input">
+                <input class="quantity" type="number" min="1" max="100" value="1"> 
+                <i class="fas fa-trash-alt" onclick="removeItem(event)"></i>
+              </div>
             </div>
            `)
           }
-
-        console.log(getdata)
-        var goodsContents = document.querySelector('.goods-contents')
-        dataString = getdata.join('')
-        goodsContents.innerHTML = dataString;
+          /*가져온데이터정보*/
+          // console.log(getdata)
+          
+          var goodsContents = document.querySelector('.goods-contents')
+          dataString = getdata.join('')
+          goodsContents.innerHTML = dataString;
         }
-      } 
+      }
     }
   })
+
+  const removeItem = (e)=> {
+    Toastify({
+      text: "장바구니에서 삭제되었습니다.",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      positionLeft: false, // `true` or `false`
+      backgroundColor: "linear-gradient(to right, #f03141, #fe7406)",
+    }).showToast();
+    e.target.parentElement.parentElement.remove();
+    // delete getdata
+
+    // function deleteData(item, url) {
+    //   return fetch(url + '/' + item, {
+    //     method: 'delete'
+    //   })
+    //   .then(response => response.json());
+    // }
+    // console.log(cardList)
+
+  }
 
 

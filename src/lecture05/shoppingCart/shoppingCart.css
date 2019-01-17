@@ -71,7 +71,6 @@ html, body {
 
 body .shoppingCartList {
     text-align: center;
-    display:flex;
     width: 500px;
     height:170px;
     border: 1px solid #BFBFBF;
@@ -89,11 +88,43 @@ body .shoppingCartList p{
     margin-left:20px;
     margin-top:10px;
     align-items: center;
+    margin:16px;
+    
+}
+
+.shoppingCartList .cardList {
+    width: 310px;
+    margin-top:20px;
+    margin-right: 45px;
+    display: inline-block
+}
+
+.shoppingCartList .input {
+    float:right;
+    margin-right:30px;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:13%;
+
 
 }
+.shoppingCartList .input input {
+    margin-top:15%;
+    font-size:15px;
+    padding:5px 5px;
+    float:right;
+}
+
 
 a {
     text-decoration: none;
     color:white;    
 }
 
+i{
+    margin-left:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
