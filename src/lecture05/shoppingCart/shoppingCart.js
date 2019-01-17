@@ -4,56 +4,45 @@ const instance = axios.create({
 
 instance.get('cart.json')
   .then(res => {
-    debugger;
+    // debugger;
     const data = res.data;
     const dataValue = Object.keys(data);
     console.log(dataValue.length);
 
+    /*post 데이터 수만큼 shoppingCartList div 추가 */
     for (var i = 0; i < dataValue.length; i++) {
       if (dataValue.length > 0) {
-        const addList = document.createElement("div")
-        const contents = document.querySelector('.goods-contents');
-        addList.className = 'shoppingCartList';
+        // const addList = document.createElement("div")
+        // const contents = document.querySelector('.goods-contents');
+        // addList.className = 'shoppingCartList';
+        // const shoppingCartList = document.querySelector('.shoppingCartList')
 
-        contents.appendChild(addList)
-      }
+        // contents.appendChild(addList)
+
+        /* 장바구니데이터 노출 */
+        var value = Object.values(data)
+
+        var getdata = [];
+        
+        for (var i = 0; i < dataValue.length; i++) {
+          if (dataValue.length > 0) {        
+            getdata.push(`
+            <div class ="shoppingCartList">
+              <p>${value[i].name}</p><br>
+              <p>색깔 : ${value[i].options.color} + / + 사이즈 : ${value[i].options.size} </p>
+              <p>가격 : ${value[i].price}</p>
+              <p>+배송료 ${value[i].shipping.method}</p>
+            </div>
+           `)
+          }
+
+        console.log(getdata)
+        var goodsContents = document.querySelector('.goods-contents')
+        dataString = getdata.join('')
+        goodsContents.innerHTML = dataString;
+        }
+      } 
     }
-
-    const items=[];
-
-    const value = Object.values(data)
-    // console.log(Object.values(value));
-    value.forEach( value => console.log(value) );
-  
-    // value.forEach (items.push)
-
-    // // const list = document.querySelector('.shopping-cart-list')
-    // for (var i = 0; i < dataValue.length; i++) {
-    //   if (dataValue.length > 0) {
-        
-        
-    //     const product = [];
-    //     // var newProduct = {
-    //     //   product_id: null,
-    //     //   product_color: null,
-    //     //   product_size: null,
-    //     //   product_qty: 0,
-    //     //   product_price: 0.00,
-    //     // };
-    //     // newProduct.product_id = productID;
-    //     // newProduct.product_desc = product_desc;
-    //     // newProduct.product_qty = qty;
-    //     // newProduct.product_price = price;
-
-
-    //     // products.push(newProduct);
-    //   }
-    // }
-
-
-    // list.innerHTML = items.join('');
-
-
   })
 
 

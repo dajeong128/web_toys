@@ -83,7 +83,7 @@ body .shoppingCartList {
     color:black;
 }
 
-body .shoppingCartList li{
+body .shoppingCartList p{
     text-align:left;
     list-style: none;
     margin-left:20px;

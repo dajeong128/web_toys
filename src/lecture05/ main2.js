@@ -38,7 +38,7 @@ instance.get('goods=json')
                     <i class="fas fa cart-plus" style="float:right; cursor:pointer;" onclick="keepInCart(event, ${Object.keys(data).indexOf(key)})"></i>
             `)
         }
-        ul.innderHTML = items.join('');
+        ul.innerHTML = items.join('');
     })
 const keepInCart = (e, id) => {
     console.log(id);
