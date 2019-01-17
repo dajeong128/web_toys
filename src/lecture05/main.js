@@ -56,5 +56,7 @@ instance.get('goods.json')
     });
 
     function openCartList() {
-        window.open("http://localhost:3006/src/lecture05/shoppingCart/shoppingCart.html");
+        // window.open("http://localhost:3006/src/lecture05/shoppingCart/shoppingCart.html");
+        // 절대 경로보단 상대 경로를 입력하는 게 좋아요!
+        window.open("./shoppingCart/shoppingCart.html");
       }
