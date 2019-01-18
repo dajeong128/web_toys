@@ -141,11 +141,11 @@ i{
 }
 
 .total p{
-    float:right;
-    margin-right:70px;
+    text-align:center;
     font-size:18px;
     margin-top:0px;
     margin-bottom:-10px;
+    margin-left:365px;
 }
 
 .info {
