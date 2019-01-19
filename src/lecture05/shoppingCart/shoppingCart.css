@@ -199,3 +199,6 @@ i{
     outline: none;
     border: 3px solid #555;  
 }
+.info .order {
+    outline:none;
+}
