@@ -13,22 +13,23 @@ instance.get('cart.json')
     /*post 데이터 수만큼 shoppingCartList div 추가 */
     // for (var i = 0; i < dataValue.length; i++) {
     //   if (dataValue.length > 0) {
-        // const addList = document.createElement("div")
-        // const contents = document.querySelector('.goods-contents');
-        // addList.className = 'shoppingCartList';
-        // const shoppingCartList = document.querySelector('.shoppingCartList')
-        // contents.appendChild(addList)
+    // const addList = document.createElement("div")
+    // const contents = document.querySelector('.goods-contents');
+    // addList.className = 'shoppingCartList';
+    // const shoppingCartList = document.querySelector('.shoppingCartList')
+    // contents.appendChild(addList)
 
-        /* 장바구니데이터 노출 */
-        var value = Object.values(data)
-        // console.log(value);
+    /* 장바구니데이터 노출 */
+    var value = Object.values(data)
+    // console.log(value);
 
-        var getdata = [];
-        var dataPrice = [];
 
-        for (var i = 0; i < dataValue.length; i++) {
-          if (dataValue.length > 0) {
-            getdata.push(`
+    var getdata = [];
+    var dataPrice = [];
+
+    for (var i = 0; i < dataValue.length; i++) {
+      if (dataValue.length > 0) {
+        getdata.push(`
             <div class ="shoppingCartList">
               <div class = "cardList">
                 
@@ -42,52 +43,72 @@ instance.get('cart.json')
               </div>
             </div>
            `)
-           var addTotal = dataPrice.push(value[i].price)
-           var reducer = (accumulator, currentValue) => accumulator + currentValue;
+        var addTotal = dataPrice.push(value[i].price)
+        var reducer = (accumulator, currentValue) => accumulator + currentValue;
 
+        /*가져온데이터정보*/
+        // console.log(getdata)
 
-
-          /*가져온데이터정보*/
-          // console.log(getdata)
-          
-          var goodsContents = document.querySelector('.goods-contents')
-          dataString = getdata.join('')
-          goodsContents.innerHTML = dataString;
-        }
+        var goodsContents = document.querySelector('.goods-contents')
+        dataString = getdata.join('')
+        goodsContents.innerHTML = dataString;
       }
-      /*금액누적*/
-      // console.log(dataPrice.reduce(reducer));
+    }
+    /*금액누적*/
+    // console.log(dataPrice.reduce(reducer));
 
-      var total = document.querySelector('.total');
-      var price = [];
-      price.push (`
+    var total = document.querySelector('.total');
+    var price = [];
+    price.push(`
         <div class="grandTotal">
           <p>합계 ${dataPrice.reduce(reducer).toLocaleString()}원</p>
         </div>
       `)
 
-      var totalPrice = document.querySelector('.total');
-      totalPrice.innerHTML = price;
+    var totalPrice = document.querySelector('.total');
+    totalPrice.innerHTML = price;
 
-  //   }
+    //   }
   }
   )
+const removeItem = (e) => {
+  axios
+    instance.delete('cart.json', value)
+    .then(function (response) {
+      Toastify({
+        text: "장바구니에서 삭제되었습니다.",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        positionLeft: false, // `true` or `false`
+        backgroundColor: "linear-gradient(to right, #f03141, #fe7406)",
+      }).showToast();
 
- 
-  const removeItem = (e)=> {
-    Toastify({
-      text: "장바구니에서 삭제되었습니다.",
-      duration: 3000,
-      destination: "https://github.com/apvarun/toastify-js",
-      newWindow: true,
-      close: true,
-      gravity: "top", // `top` or `bottom`
-      positionLeft: false, // `true` or `false`
-      backgroundColor: "linear-gradient(to right, #f03141, #fe7406)",
-    }).showToast();
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
-    delete getdata
-    e.target.parentElement.parentElement.remove();
+  // const removeItem = (e)=> {
+  //   instance.delete(`goods.json`)
+  //   .then(res => {
+  //   Toastify({
+  //     text: "장바구니에서 삭제되었습니다.",
+  //     duration: 3000,
+  //     destination: "https://github.com/apvarun/toastify-js",
+  //     newWindow: true,
+  //     close: true,
+  //     gravity: "top", // `top` or `bottom`
+  //     positionLeft: false, // `true` or `false`
+  //     backgroundColor: "linear-gradient(to right, #f03141, #fe7406)",
+  //   }).showToast();
+
+
+    // e.target.parentElement.parentElement.remove();
 
     // function deleteData(item, url) {
     //   return fetch(url + '/' + item, {
@@ -97,6 +118,9 @@ instance.get('cart.json')
     // }
     // console.log(cardList)
 
-  }
+
+//   })
+// }
+
 
 
