@@ -79,21 +79,31 @@ const keepInCart = (e, id) => {
       instance.get(`goods/${id}/options/${targetValue}.json`)
         .then((optionData) => {
           res.data.options = optionData.data;
+          let newArr = [res.data];
 
-          instance.post('cart.json', res.data)
-            .then(res => {
-              Toastify({
-                text: "장바구니에 추가되었습니다.",
-                duration: 3000,
-                destination: "https://github.com/apvarun/toastify-js",
-                newWindow: true,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                positionLeft: false, // `true` or `false`
-                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-              }).showToast();
+          instance.get('cart.json')
+            .then(cart => {
+              if (cart.data && cart.data.length > 0) {
+                newArr = [res.data, ...cart.data];
+              } else {
+                newArr = [res.data];
+              }
+
+              instance.put('cart.json', newArr)
+                .then(res => {
+                  Toastify({
+                    text: "장바구니에 추가되었습니다.",
+                    duration: 3000,
+                    destination: "https://github.com/apvarun/toastify-js",
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    positionLeft: false, // `true` or `false`
+                    backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                  }).showToast();
+                })
+                .catch(err => console.error(err));
             })
-            .catch(err => console.error(err));
         })
     })
     .catch(err => console.error(err));

@@ -1,0 +1,205 @@
+html, body {
+    height: 100%;
+    background-color:black;
+    color:white;
+}
+
+.title {
+    width: 100%;
+    height:100px;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* 
+.goods-contentsInCart-list {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.goods-contentsInCart ul li {
+    list-style:none;
+    margin-right : 70px;
+    margin-top: 100px;
+} */
+.nav {
+    height:60px;
+    background-color:grey;
+    display:flex;
+    list-style: none;
+    float:right;
+    border-bottom:4px solid white;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+.goods-list , .shopping-cart , .order-list {
+    align-items: center;
+    width: auto;
+    margin: auto;
+    cursor:pointer;
+    background-color:grey;
+    padding:0 11px 0 11px;
+}
+
+.shopping-cart {
+    background-color: white;
+    color:black;
+    width: auto;
+    height:60px;
+    display:flex;
+}
+
+
+
+
+.nav li:hover {
+    background-color: white;
+    color:black;
+    width: auto;
+    height:60px;
+    display:flex;
+}
+
+body .shoppingCartList {
+    text-align: center;
+    width: 500px;
+    height:170px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 2px 2px 10px #aaaaaa;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 30px;
+    color:black;
+}
+
+body .shoppingCartList p{
+    text-align:left;
+    list-style: none;
+    margin-left:20px;
+    margin-top:10px;
+    align-items: center;
+    margin:16px;
+    
+}
+
+.shoppingCartList .cardList {
+    width: 310px;
+    margin-top:20px;
+    margin-right: 45px;
+    display: inline-block
+}
+
+.shoppingCartList .input {
+    float:right;
+    margin-right:30px;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:13%;
+
+
+}
+.shoppingCartList .input input {
+    margin-top:15%;
+    font-size:15px;
+    padding:5px 5px;
+    float:right;
+}
+
+
+a {
+    text-decoration: none;
+    color:white;    
+}
+
+i{
+    margin-left:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.totalOfShoppingCartList {
+    width:100%;
+    color:white;
+
+}
+
+.grandTotal {
+    width:100%;
+    height:20px;
+}
+
+.total p{
+    text-align:center;
+    font-size:18px;
+    margin-top:0px;
+    margin-bottom:-10px;
+    margin-left:365px;
+}
+
+.info {
+    width: 500px;
+    height:350px;
+    border: 1px solid #BFBFBF;
+    box-shadow: 2px 2px 10px #aaaaaa;
+    background-color: white;
+    color:black;
+    margin:auto;
+    margin-top:30px;
+
+}
+
+.info h3 {
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+
+.info input{
+    font-size:15px;
+    padding:5px;
+    margin:auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    display: block;
+    width:90%;
+}
+
+.info .order {
+    width:60px;
+    height:40px;
+    font-size: 15px;
+    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin:auto;
+    margin-top: 18px;
+    background-color:white;
+    border:1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.info input[type=text]:focus {
+    outline: none;
+    border: 3px solid #555;  
+}
+.info .order {
+    outline:none;
+}
