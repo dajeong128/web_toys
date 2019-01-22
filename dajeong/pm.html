@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="Referrer" content="origin">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="robots" content="index,nofollow">
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <title>맘스폰1차신청서</title>
+</head>
+<body class="jc_bg">
+
+    <div class="jc-wrap" id="vue-mot">
+        <div class="jc-wrap-inner">
+
+            <div class="center" style="margin-bottom: 30px;">
+                <img class = "mainImg" src="http://win7675.cafe24.com/assets/img/img_application_top.jpg?v=201810231034" alt="1차 신청서" width="100%" />
+            </div>
+
+            <form method="post" action="http://win7675.cafe24.com/response/res_collection_info.php" class="form-collection-info">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-name">이름</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <input type="text"
+                                       name="name"
+                                       id="f-name"
+                                       placeholder="이름 입력"
+                                       class="form-control"
+                                       autofocus
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-phone">연락처</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <input type="tel"
+                                       name="phone"
+                                       id="f-phone"
+                                       placeholder="(-)제외"
+                                       class="form-control"
+                                       autofocus
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-email">이메일</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <input type="email"
+                                       name="email"
+                                       id="f-email"
+                                       placeholder="이메일 입력"
+                                       class="form-control"
+                                       autofocus
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-company">통신사</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <select name="company" id="f-company" class="form-control" required
+                                        @change="getItemListByCompanyId($event);">
+                                    <option value="">통신사선택</option>
+                                                                        <option value="1">SK</option>
+                                                                        <option value="2">KT</option>
+                                                                        <option value="3">LG</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-type">가입유형</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <select name="type" id="f-type" class="form-control" required>
+                                    <option value="NM" selected>번호이동</option>
+                                    <option value="DC">기기변경</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-device">기종</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <select name="device" id="f-device" class="form-control" required>
+                                    <option value="">기종 선택</option>
+                                                                        <option value="5">갤럭시노트9_128G</option>
+                                                                        <option value="6">갤럭시노트9_512G</option>
+                                                                        <option value="7">갤럭시S9_64G</option>
+                                                                        <option value="8">갤럭시S9+_64G</option>
+                                                                        <option value="9">갤럭시S9+_256G</option>
+                                                                        <option value="10">갤럭시노트8_64G</option>
+                                                                        <option value="11">갤럭시S8</option>
+                                                                        <option value="12">갤럭시A8</option>
+                                                                        <option value="13">갤럭시A8_Star</option>
+                                                                        <option value="14">갤럭시A6</option>
+                                                                        <option value="15">갤럭시온7프라임</option>
+                                                                        <option value="16">LG G7</option>
+                                                                        <option value="17">LG V30</option>
+                                                                        <option value="18">LG V35</option>
+                                                                        <option value="23">아이폰X_64G</option>
+                                                                        <option value="24">아이폰6s_32G</option>
+                                                                        <option value="25">LG V40</option>
+                                                                        <option value="26">갤럭시A7_2018</option>
+                                                                        <option value="27">아이폰XS_64G</option>
+                                                                        <option value="28">아이폰XS_256G</option>
+                                                                        <option value="29">아이폰XS_512G</option>
+                                                                        <option value="30">아이폰XS_MAX_64G</option>
+                                                                        <option value="32">아이폰XS_MAX_256G</option>
+                                                                        <option value="33">아이폰XS_MAX_512G</option>
+                                                                        <option value="34">아이폰XR_64G</option>
+                                                                        <option value="35">아이폰XR_128G</option>
+                                                                        <option value="36">아이폰XR_256G</option>
+                                                                        <option value="38">아이폰7_32G</option>
+                                                                        <option value="39">갤럭시 Jean</option>
+                                                                        <option value="40">갤럭시A9</option>
+                                                                        <option value="41">KT아키폰</option>
+                                                                        <option value="42">SK 쿠키즈미니폰</option>
+                                                                        <option value="43">LG Q9</option>
+                                                                        <option value="43">갤럭시 J3 2017</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-3 center">
+                                <label for="f-fee">요금제</label>
+                            </div>
+                            <div class="col-sm-12 col-md-9">
+                                <!-- TODO 디비에서 내려주되 ajax로 변경이 될 수 있도록 한다. -->
+                                <select name="fee" id="f-fee" class="form-control" required>
+                                    <option value="">요금제 선택</option>
+                                    <option v-for="item in item_list" :value="item.id">{{item.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="panel-agreement">
+                    <div class="panel-heading">개인정보수집 및 활용에 관한 동의</div>
+                    <div class="panel-body">
+                        <div class="agreement">「개인정보 보호법」에 근거하여 서비스 이용에 따른 개인정보 수집·이용에 관련된 내용을 안내하오니 자세히 읽으신 후 동의 여부를 결정하여 주시기 바랍니다.
+                            ■ 개인정보의 수집․이용 목적
+                            휴대전화 개통업무 및 각종 안내를 위해 활용합니다.
+                            ■ 수집․이용하는 개인정보의 항목
+                            필수항목 : 가입자명, 생년월일, 이메일, 명의자 휴대폰, 비상연락처
+                            신청서 작성과정에서 시스템에 의해 자동 수집되는 항목 : IP, 유입경로, 접속로그 등
+                            ■ 개인정보의 보유․이용 기간
+                            「표준 개인정보 보호지침」에 근거하여 2년을 주기로 재동의 하지 않을 경우 6개월 이내
+                            「개인정보 보호법」에 근거하여 상기 내용에 대한 동의를 거부할 수 있으며 다만, 동의를 거부할 경우 신청서를 작성하지 못 하는 것 이외에 어떠한 불이익도 발생하지 않습니다.
+                        </div>
+                        <div class="clearfix agree_box panel-footer">
+                            위와 같이 개인정보를 수집·이용하는데 동의하십니까 ?
+                            <span class="float-right">
+                                <input type="radio" name="agree" id="agree" checked required value="Y" />
+                                <label for="agree">동의함</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="agree" id="disagree" value="N" />
+                                <label for="disagree">동의하지 않음</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="center">
+                    <button type="submit" class="btn btn-lg btn-primary btn-submit">제출하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
