@@ -11,6 +11,7 @@ import GoodsItems from './components/GoodsItems/GoodsItems';
 class App extends Component {
   render() {
     return (
+
       <div className="App">
        <Header />
        <Title title="What you need"/>
@@ -18,6 +19,7 @@ class App extends Component {
          <li><GoodsItems /></li>
        </ul>
       </div>
+
     );
   }
 }
