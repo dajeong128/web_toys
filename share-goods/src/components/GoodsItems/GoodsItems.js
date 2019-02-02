@@ -1,5 +1,4 @@
 import React from 'react';
-import './GoodsItems.css';
 
 
 const randomImg = ({ value, setValue }) => (

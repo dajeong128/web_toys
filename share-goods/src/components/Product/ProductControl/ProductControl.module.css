@@ -1,0 +1,11 @@
+
+.ProductList {
+    width:270px;
+    margin-right:40px;
+}
+
+.Pricebox {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}

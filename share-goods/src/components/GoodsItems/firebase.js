@@ -9,7 +9,7 @@ const instance = axios.create({
 
 class firebase extends React.Component {
   render() {
-    const firebase = (props) => {
+    const getData = (props) => {
       instance.get('goods.json')
       .then(res => {
         const firebaseData = res.data
@@ -37,12 +37,14 @@ class firebase extends React.Component {
             </li>
           `)
           items.join('');
-        }
+        })
+      }
 
-      .catch(function (error) {
-        console.log(error);
-      })
-    }
+      const error = (err) => {
+        .catch(err => {
+          console.log(err);
+        })
+      }
   }
 }
 
