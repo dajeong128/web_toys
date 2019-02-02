@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './ProductControl.module.css'
 import { FaCartPlus } from 'react-icons/fa';
 import Image from '../../UI/Image/Image'
+import Options from '../../Options/Options'
 
 
 const productControl = (props) => {
@@ -13,13 +14,7 @@ const productControl = (props) => {
         effect = "blur"
         />
         <p><strong>{props.name}</strong></p>
-        <select>
-            {props.options.map(option => (
-                <option key={option.id}>
-                    {option.color} {option.size} {option.stock}
-                </option>
-            ))}
-        </select>
+        <Options />
         <p>{props.provider}</p>
         <div className={classes.Pricebox}>
           <p>{props.price}</p>

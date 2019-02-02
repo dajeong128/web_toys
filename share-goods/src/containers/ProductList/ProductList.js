@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 import ProductControls from '../../components/Product/ProductControls/ProductControls';
 import axios from '../../axios';
+import Options from '../../components/Options/Options'
 
 class ProductList extends Component {
   state = {
     name: 'test',
-    products: []
+    products: []    
   }
 
   async componentDidMount() {
@@ -25,6 +26,7 @@ class ProductList extends Component {
     return (
       <div>
         <ProductControls products={this.state.products} />
+        <Options options={this.state.options} />
       </div>
     )
   }
