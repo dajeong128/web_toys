@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './GoodsItems.css';
 
 
@@ -8,4 +8,6 @@ const randomImg = ({ value, setValue }) => (
     </div>
 )
 
+
 export default randomImg
+
