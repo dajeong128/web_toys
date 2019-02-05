@@ -8,7 +8,7 @@ const productControls = (props) => {
     <ul className={classes.ProductWrapper}>
         {
             props.products.map(product => 
-            <ProductControl 
+            <ProductControl
                 key={product.id}
                 id ={product.id}
                 name = {product.name}
