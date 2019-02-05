@@ -2,8 +2,8 @@ import React from 'react'
 import classes from './ProductControl.module.css'
 import { FaCartPlus } from 'react-icons/fa';
 import Image from '../../UI/Image/Image'
-import OptionInput from '../../Option/OptionInput/OptionInput'
-// import OptionSelector from '../../Option/OptionSelector/OptionSelector'
+// import OptionInput from '../../Option/OptionInput/OptionInput'
+import OptionSelect from '../../Option/OptionSelect/OptionSelect'
 
 
 // import Option from '../../Option/Option'
@@ -18,7 +18,7 @@ const productControl = (props) => {
         effect = "blur"
         />
         <p><strong>{props.name}</strong></p>
-        <OptionInput />
+        <OptionSelect />
         <p>{props.provider}</p>
         <div className={classes.Pricebox}>
           <p>{props.price}</p>

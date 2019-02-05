@@ -9,10 +9,10 @@ const productControls = (props) => {
         {
             props.products.map(product => 
             <ProductControl
-                key={product.id}
+                key={product.id}    
                 id ={product.id}
                 name = {product.name}
-                options = {product.options}
+                options = {product.options.color}
                 price = {product.price}
                 provider = {product.provider}
                 shipping = {product.shipping}
@@ -21,5 +21,8 @@ const productControls = (props) => {
     </ul>
   )
 }
+
+
+
 
 export default productControls;

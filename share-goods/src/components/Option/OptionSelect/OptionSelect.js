@@ -1,29 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 // import optionInput from './OptionInput';
 
-const options = (props) => {
 
-    return (
-    <p>
-        {
-            props.products.map(product => 
-            <div>
-                key={product.id}
-                id ={product.id}
-                options = {product.options}
-            </div>
-            )
-        }
-    </p>
-  )
+class optionSelect extends Component {
+    render() {
+        return (
+            <select>
+                <option>
+                {this.props.option.color} {this.props.option.size} {this.props.option.stock}
+                </option>
+            </select>
+        )
+    }
 }
 
-const option = (props) => {
-    return (
-        <select>
-            {props.option.color} {props.option.size} {props.option.stock}
-        </select>
-    )
-}
-
-export default option;
+export default optionSelect;

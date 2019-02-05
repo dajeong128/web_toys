@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ProductControls from '../../components/Product/ProductControls/ProductControls';
+
 import axios from '../../axios';
 
 
@@ -27,6 +28,7 @@ class ProductList extends Component {
     return (
       <div>
         <ProductControls products={this.state.products} />
+        <optionSelect option={this.state.option}/>
       </div>
     )
   }
