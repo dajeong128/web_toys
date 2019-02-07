@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+// import classes from '../../Product/ProductControls.module.css'
+
 // import optionInput from './OptionInput';
 
 
-class optionSelect extends Component {
-    render() {
-        return (
-            <select>
-                <option>
-                {this.props.option.color} {this.props.option.size} {this.props.option.stock}
-                </option>
-            </select>
-        )
-    }
+const OptionSlect = (props) => {
+    return (
+        <select>
+            {props.options.color} {props.options.size} {props.options.stock}
+        </select>
+    )
 }
 
-export default optionSelect;
+
+export default OptionSlect

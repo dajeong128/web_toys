@@ -6,8 +6,6 @@ import Image from '../../UI/Image/Image'
 import OptionSelect from '../../Option/OptionSelect/OptionSelect'
 
 
-// import Option from '../../Option/Option'
-
 
 const productControl = (props) => {
     return (

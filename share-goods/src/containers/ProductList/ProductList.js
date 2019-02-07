@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ProductControls from '../../components/Product/ProductControls/ProductControls';
-
+import OptionSelect from '../../components/Option/OptionSelect/OptionSelect'
 import axios from '../../axios';
 
 
@@ -9,7 +9,8 @@ import axios from '../../axios';
 class ProductList extends Component {
   state = {
     name: 'test',
-    products: []    
+    products: [],
+    options: []
   }
 
   async componentDidMount() {
@@ -19,7 +20,8 @@ class ProductList extends Component {
     //   products: [...prevState.products, ...data]
     // }));
     this.setState({
-      products: data
+      products: data,
+      options: data
     });
     console.log(data);
   }
@@ -27,8 +29,8 @@ class ProductList extends Component {
   render() {
     return (
       <div>
-        <ProductControls products={this.state.products} />
-        <optionSelect option={this.state.option}/>
+        <ProductControls products={state.products} />
+        <OptionSelect options={state.products}/>
       </div>
     )
   }
