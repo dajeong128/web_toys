@@ -1,17 +1,27 @@
 import React from 'react'
-
+import classes from './OptionSelect.module.css'
+ // import classes from '../../../components/Product/ProductControl/ProductControl.module.css'
 
 // import optionInput from './OptionInput';
 
 
-const OptionSlect = (props) => {
-    console.log(props)
 
+const OptionSelect = (props) => {
+    console.log(props)
     return (
-        <select>
-            {props.options.color} {props.option.size} {props.options.stock}
+
+        <select className={classes.Option}>
+            {
+                props.options.map(props =>
+                    
+                        <option>
+                        {props.color} {props.size} {props.stock}
+                        </option>
+                )
+            }
         </select>
     )
 }
 
-export default OptionSlect
+
+export default OptionSelect

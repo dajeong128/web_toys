@@ -8,7 +8,7 @@ import OptionSelect from '../../Option/OptionSelect/OptionSelect'
 
 
 const productControl = (props) => {
-  console.log(props.options)
+  // console.log(props.options)
     return (
         <li className={classes.ProductList}>
         <Image 
@@ -17,13 +17,13 @@ const productControl = (props) => {
         effect = "blur"
         />
         <p><strong>{props.name}</strong></p>
-        <OptionSelect />
+        <OptionSelect options={props.options} />
         <p>{props.provider}</p>
         <div className={classes.Pricebox}>
           <p>{props.price}</p>
         <FaCartPlus />
         </div>
-        <p>{props.shipping.price}</p>
+        <p className={classes.ShippingPrice}>+ 배송료{props.shipping.price.toLocaleString()}원</p>
       </li>
     )
 }

@@ -3,7 +3,7 @@ import classes from './ProductControls.module.css'
 import ProductControl from '../ProductControl/ProductControl'
 
 const productControls = (props) => {
-
+    // console.log(props)
     return (
     <ul className={classes.ProductWrapper}>
         {

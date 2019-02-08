@@ -10,7 +10,6 @@ class ProductList extends Component {
   state = {
     name: 'test',
     products: [],
-    options: []
   }
 
   async componentDidMount() {

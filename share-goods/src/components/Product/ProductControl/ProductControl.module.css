@@ -10,3 +10,8 @@
     align-items: center;
 }
 
+.ShippingPrice {
+    font-size: 14px;
+    margin-top:-10px;
+    color:grey;
+}
