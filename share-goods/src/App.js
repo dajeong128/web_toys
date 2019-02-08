@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Title from './components/Title/Title';
 import ProductList from './containers/ProductList/ProductList';
 
-
 class App extends Component {
   render() {
 

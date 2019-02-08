@@ -8,6 +8,7 @@ import OptionSelect from '../../Option/OptionSelect/OptionSelect'
 
 
 const productControl = (props) => {
+  console.log(props.options)
     return (
         <li className={classes.ProductList}>
         <Image 

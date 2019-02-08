@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import ProductControls from '../../components/Product/ProductControls/ProductControls';
-import OptionSelect from '../../components/Option/OptionSelect/OptionSelect'
+// import OptionData from '../../components/Option/OptionData/OptionData'
 import axios from '../../axios';
 
 
@@ -21,16 +21,14 @@ class ProductList extends Component {
     // }));
     this.setState({
       products: data,
-      options: data
     });
-    console.log(data);
+    // console.log(data);
   }
 
   render() {
     return (
       <div>
-        <ProductControls products={state.products} />
-        <OptionSelect options={state.products}/>
+        <ProductControls products={this.state.products} />
       </div>
     )
   }

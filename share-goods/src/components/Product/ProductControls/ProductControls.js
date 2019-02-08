@@ -12,12 +12,14 @@ const productControls = (props) => {
                 key={product.id}    
                 id ={product.id}
                 name = {product.name}
-                options = {product.options.color}
+                options = {product.options}
+                // optionsData = {product.options[0]}
                 price = {product.price}
                 provider = {product.provider}
                 shipping = {product.shipping}
             />)
         }
+        
     </ul>
   )
 }
