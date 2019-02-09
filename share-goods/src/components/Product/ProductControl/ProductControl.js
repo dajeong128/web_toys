@@ -28,6 +28,7 @@ const productControl = (props) => {
         <div className={classes.Pricebox}>
           <p>{props.price.toLocaleString()}원</p>
         <FaCartPlus onClick={() => props.addToCart({
+          id : props.id,
           name: props.name,
           options: (selectedOption) ? selectedOption : props.options[0],
           price: props.price,
