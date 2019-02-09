@@ -1,0 +1,22 @@
+
+.TextInput {
+    align-items: center;
+    width: 100%;
+    padding: 7px 15px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size:12px;
+    vertical-align: baseline;
+    border: 2px solid #dfdfdf;
+    border-radius: 40px;
+}
+
+
+.TextInput:focus {
+    border: 3px solid #555;
+  }
+
