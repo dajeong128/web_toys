@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import Title from './components/Title/Title';
 import ProductList from './containers/ProductList/ProductList';
+import Layout from './hoc/Layout/Layout'
+import { Route, Switch } from 'react-router-dom'
+import Cart from './containers/Cart/Cart'
+
 
 class App extends Component {
   render() {
 
     return (
       <div className="App">
-       <Header />
-       <Title title="What you need"/>
-       <ProductList />
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={ProductList} />
+            <Route path="/cart" component={Cart} />
+          </Switch>
+        </Layout> 
       </div>
 
     );
