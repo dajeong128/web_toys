@@ -1,15 +1,11 @@
 .Option {
     width:100%;
     box-sizing: border-box;
-    border: 1px solid #ccc;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    border: 1px solid #ccc;
     outline: none;
     font-size:15px;
-    vertical-align: baseline;
     border: 2px solid #dfdfdf;
-    border-radius: 40px;
     background-color:white;
 }
 
