@@ -12,30 +12,34 @@ class CartList extends Component {
     state = {}
 
     componentDidMount() {
+     this._getCartListData();   
+    }
+
+    _renderCartList = () => {
+        const cartList = this.state.map(index => {
+            return <CartList name={index.name} options={index.options} price={index.price} shippingPrice={index.shippingPrice} />
+        })
+        return cartList
+    }
+    _getCartListData = async () => {
+        const cartList = await this._callAPI()
+        this.setState({
+            cartList
+        })
+    }
+
+    _callAPI = () => {
         fetch('https://goods-204a7.firebaseio.com/cart.json')
-            // .then(response => response.json)
-            .then(res => res.json())
-            .then(json => console.log(json))
-            // .then(json => {
-            //     this.setState ({
-            //         addToCart: json
-            //     })
-            // })
-            .catch(err => console.log(err))
+        // .then(response => response.json)
+        .then(res => res.json())
+        .then(json => console.log(json))
+        .catch(err => console.log(err))
     }
     render() {
         return (
             <div>
-                {
-                this.state.map(this.state =>
-                    <div>
-                        <h4>{this.state.name}</h4>
-                        <p>{this.state.options}</p>
-                        <p>{this.state.price}원</p>
-                        <p>+{this.state.shippingPrice}원</p>
-                    </div>
-                )
-                }
+                
+                {this.state.cartList ? this._renderCartList() : 'err'}
             </div>
         )
     }
