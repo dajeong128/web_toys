@@ -27,7 +27,7 @@ class CartList extends Component {
         return (
             <div>
                 {
-                this.state.map(this =>
+                this.state.map(this.state =>
                     <div>
                         <h4>{this.state.name}</h4>
                         <p>{this.state.options}</p>
