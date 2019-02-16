@@ -1,0 +1,21 @@
+.cartItemsList {
+    width:500px;
+    height:164px;
+    border: 1px solid grey;
+    margin:auto;
+    padding:20px;
+}
+
+.cartItemsList p {
+    /* align-items:center;
+    display:flex; */
+    font-size:14px;
+}
+
+
+.cartItemsList span {
+    color:grey;
+    font-size:12px;
+    display:block; 
+    margin-top:10px;   
+}
