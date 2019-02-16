@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Title from '../../components/Title/Title'
 import CartItems from '../../components/CartItems/CartItems'
 import axios from '../../axios'
-
+import classes from './Cart.module.css'
 
 class Cart extends Component {
 
@@ -22,7 +22,7 @@ class Cart extends Component {
        }
    
        _callAPI = async () => {
-            const { data} = await axios.get('/cart.json');
+            const { data } = await axios.get('/cart.json');
             return data;
         //    fetch('https://goods-204a7.firebaseio.com/cart.json')
         //    .then(res => res.json())
@@ -32,7 +32,7 @@ class Cart extends Component {
 
     render (){
         return (
-            <div>
+            <div className={classes.Cart}>
                 <Title title="We hope your good shopping!"/>
                 <CartItems items={this.state.cartList}/>
             </div>
@@ -40,6 +40,5 @@ class Cart extends Component {
         )
     }
 }
-
 
 export default Cart

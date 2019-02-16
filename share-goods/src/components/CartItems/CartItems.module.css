@@ -1,9 +1,12 @@
 .cartItemsList {
     width:500px;
     height:164px;
-    border: 1px solid grey;
     margin:auto;
     padding:20px;
+    border:1px solid #eee;
+    box-shadow:0 2px 3px #ccc;
+    box-sizing: border-box;
+    margin-bottom:40px;
 }
 
 .cartItemsList p {
