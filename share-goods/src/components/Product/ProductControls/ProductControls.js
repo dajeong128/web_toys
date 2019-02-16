@@ -17,6 +17,7 @@ const productControls = (props) => {
                 price = {product.price}
                 provider = {product.provider}
                 shipping = {product.shipping}
+                addToCart={(data) => props.addToCart(data)}
             />)
         }
         
