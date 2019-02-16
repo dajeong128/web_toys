@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-// import axios from '../../axios';
+
+const cartDatas = []
+const cartData =[]
+cartDatas.push(cartData)
 
 
-// const instance = axios.create ({
-//     baseURL : 'https://goods-204a7.firebaseio.com/goods.json'
-// })
-
+ 
 
 class CartList extends Component {
 
@@ -15,12 +15,7 @@ class CartList extends Component {
      this._getCartListData();   
     }
 
-    _renderCartList = () => {
-        const cartList = this.state.map(index => {
-            return <CartList name={index.name} options={index.options} price={index.price} shippingPrice={index.shippingPrice} />
-        })
-        return cartList
-    }
+
     _getCartListData = async () => {
         const cartList = await this._callAPI()
         this.setState({
@@ -30,40 +25,28 @@ class CartList extends Component {
 
     _callAPI = () => {
         fetch('https://goods-204a7.firebaseio.com/cart.json')
-        // .then(response => response.json)
         .then(res => res.json())
-        .then(json => console.log(json))
+        .then(json => cartData.push(json))
         .catch(err => console.log(err))
     }
+
+    _renderCartList = () => {
+        const cartList = this.state.filter(cartData => {
+            return <CartList name={cartData.name} options={cartData.options} price={cartData.price} shippingPrice={this.state.shippingPrice} />
+        })
+        return cartList
+    }
+
     render() {
         return (
-            <div>
-                
-                {this.state.cartList ? this._renderCartList() : 'err'}
+            <div>     
+                {this.cartData ? this._renderCartList() : console.log('err')}
             </div>
         )
     }
 
 }
-
-
-// const OptionSelect = (props) => {
-//     console.log(props)
-//     return (
-
-//         <select className={classes.Option}>
-//             {
-//                 props.options.map(props =>
-
-//                         <option>
-//                         {props.color} {props.size} {props.stock}
-//                         </option>
-//                 )
-//             }
-//         </select>
-//     )
-// }
-
+console.log(cartDatas)
 
 
 export default CartList
