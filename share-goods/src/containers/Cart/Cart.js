@@ -30,11 +30,28 @@ class Cart extends Component {
         //    .catch(err => console.log(err))
        }
 
+       deleteItems = async(key, id) => {
+           try {
+            await axios.delete(`/cart/${key}.json`);
+            let cartList = {};
+            for (let key in this.state.cartList) {
+                if(this.state.cartList[key].id !== id) {
+                    cartList[key] = this.state.cartList[key]
+                }
+            }
+            this.setState ({
+                cartList
+            })
+           } catch(err) {
+               console.error(err)
+           }
+       }
+
     render (){
         return (
             <div className={classes.Cart}>
                 <Title title="We hope your good shopping!"/>
-                <CartItems items={this.state.cartList}/>
+                <CartItems items={this.state.cartList} deleteItems={this.deleteItems}/>
             </div>
         
         )

@@ -1,4 +1,7 @@
 .cartItemsList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width:500px;
     height:164px;
     margin:auto;
@@ -21,4 +24,9 @@
     font-size:12px;
     display:block; 
     margin-top:10px;   
+}
+
+.Amount {
+    width:50px;
+    padding:10px 5px;
 }

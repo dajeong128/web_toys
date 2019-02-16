@@ -7,6 +7,7 @@ const input = (props) => {
         case 'input' :
             return (
                 <input 
+                    className={props.style}
                     {...props.elementConfig}
                     value={props.value}
                     onChange={props.changed}
