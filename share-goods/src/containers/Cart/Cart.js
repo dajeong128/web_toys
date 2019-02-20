@@ -47,11 +47,20 @@ class Cart extends Component {
            }
        }
 
+       cartItemsTotal =() => { 
+        // for (let key in this.state.cartList)
+        //     if(this.state.cartList[key].price) {
+                const reducer = (accumulator, currentValue) => accumulator + currentValue;  
+                console.log(this.state.cartList[key].price.reducer(reducer)) 
+            // }
+       }
+
     render (){
         return (
             <div className={classes.Cart}>
                 <Title title="We hope your good shopping!"/>
                 <CartItems items={this.state.cartList} deleteItems={this.deleteItems}/>
+                {this.cartItemsTotal}
             </div>
         
         )
