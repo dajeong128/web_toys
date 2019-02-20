@@ -14,14 +14,14 @@ class Cart extends Component {
         this._getCartListData();   
        }
    
-       _getCartListData = async () => {
+        _getCartListData = async () => {
            const cartList = await this._callAPI()
            this.setState({
                cartList
            })
        }
    
-       _callAPI = async () => {
+        _callAPI = async () => {
             const { data } = await axios.get('/cart.json');
             return data;
         //    fetch('https://goods-204a7.firebaseio.com/cart.json')
@@ -30,7 +30,7 @@ class Cart extends Component {
         //    .catch(err => console.log(err))
        }
 
-       deleteItems = async(key, id) => {
+        deleteItems = async(key, id) => {
            try {
             await axios.delete(`/cart/${key}.json`);
             let cartList = {};
@@ -42,25 +42,33 @@ class Cart extends Component {
             this.setState ({
                 cartList
             })
-           } catch(err) {
+            } catch(err) {
                console.error(err)
-           }
-       }
+            }
+        }
 
-       cartItemsTotal =() => { 
-        // for (let key in this.state.cartList)
-        //     if(this.state.cartList[key].price) {
-                const reducer = (accumulator, currentValue) => accumulator + currentValue;  
-                console.log(this.state.cartList[key].price.reducer(reducer)) 
-            // }
-       }
+    //     const addTotal = dataPrice.push(value[i].price)
+    //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    //     price.push(`
+    //     <div class="grandTotal">
+    //       <p>합계 ${dataPrice.reduce(reducer).toLocaleString()}원</p>
+    //     </div>
+    //   `)
+
+        cartItemsTotal = (key, price) => { 
+            const addTotal =[];
+            addTotal.push(this.state.cartList[key].price);
+            console.log(addTotal);
+            // const reducer = (accumulator, currentValue) => accumulator + currentValue;
+            // const cartPriceTotal = `${addTotal.reduce(reducer)}`
+        }
 
     render (){
         return (
             <div className={classes.Cart}>
                 <Title title="We hope your good shopping!"/>
                 <CartItems items={this.state.cartList} deleteItems={this.deleteItems}/>
-                {this.cartItemsTotal}
+                {/* <p>{this.cartItemsTotal.toLocaleString()}원</p> */}
             </div>
         
         )
