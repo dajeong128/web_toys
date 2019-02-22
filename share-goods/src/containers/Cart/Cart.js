@@ -3,6 +3,7 @@ import Title from '../../components/Title/Title'
 import CartItems from '../../components/CartItems/CartItems'
 import axios from '../../axios'
 import classes from './Cart.module.css'
+import Input from '../../components/UI/Input/Input'
 
 class Cart extends Component {
 
@@ -55,13 +56,14 @@ class Cart extends Component {
     //     </div>
     //   `)
 
-        cartItemsTotal = (key, price) => { 
-            const addTotal =[];
-            addTotal.push(this.state.cartList[key].price);
-            console.log(addTotal);
-            // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-            // const cartPriceTotal = `${addTotal.reduce(reducer)}`
-        }
+        // cartItemsTotal = async(key, price) => { 
+        //     const addTotal =[];
+        //     addTotal.push(this.state.cartList[key].price);
+        //     console.log(addTotal);
+        //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        //     const cartPriceTotal = addTotal.reduce(reducer)
+        //     console.log(cartPriceTotal);
+        // }
 
     render (){
         return (
@@ -69,6 +71,10 @@ class Cart extends Component {
                 <Title title="We hope your good shopping!"/>
                 <CartItems items={this.state.cartList} deleteItems={this.deleteItems}/>
                 {/* <p>{this.cartItemsTotal.toLocaleString()}원</p> */}
+                <div className={classes.formCard}>
+                    <h4>Enter your Contact Data</h4>
+                    <Input elementType='form' className={classes.Input}/>
+                </div>
             </div>
         
         )

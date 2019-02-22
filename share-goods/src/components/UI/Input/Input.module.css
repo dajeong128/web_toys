@@ -9,7 +9,11 @@
     background-color:white;
 }
 
-
 .Select:focus {
     border: 3px solid #555;
   }
+
+
+.formInput {
+    width:450px;
+}

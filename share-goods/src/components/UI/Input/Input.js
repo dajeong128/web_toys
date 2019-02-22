@@ -2,8 +2,7 @@ import React from 'react'
 import classes from './Input.module.css'
 
 const input = (props) => {
-    switch (props.elementType) {
-         
+    switch (props.elementType) { 
         case 'input' :
             return (
                 <input 
@@ -28,6 +27,17 @@ const input = (props) => {
                     })
                     }
                 </select>
+            )
+
+        case 'form' : 
+            return (
+                <form className={classes.formInput}>
+                    <input type="text" placeholder="Your Name" ></input>
+                    <input type="text" placeholder="Street"></input>
+                    <input type="text" placeholder="ZIP Code"></input>
+                    <input type="text" placeholder="Country"></input>
+                    <input type="text" placeholder="Your Email"></input>
+                </form>
             )
         default: break;
     }
