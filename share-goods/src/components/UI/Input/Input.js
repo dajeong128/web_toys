@@ -31,12 +31,13 @@ const input = (props) => {
 
         case 'form' : 
             return (
-                <form className={classes.formInput}>
-                    <input type="text" placeholder="Your Name" ></input>
-                    <input type="text" placeholder="Street"></input>
-                    <input type="text" placeholder="ZIP Code"></input>
-                    <input type="text" placeholder="Country"></input>
-                    <input type="text" placeholder="Your Email"></input>
+                <form className={classes.form}>
+                    <input className={classes.formInput} type="text" placeholder="Your Name" ></input>
+                    <input className={classes.formInput} type="text" placeholder="Street"></input>
+                    <input className={classes.formInput} type="text" placeholder="ZIP Code"></input>
+                    <input className={classes.formInput} type="text" placeholder="Country"></input>
+                    <input className={classes.formInput} type="text" placeholder="Your Email"></input>
+                    <button className={classes.submit} type="button">ORDER</button>
                 </form>
             )
         default: break;
