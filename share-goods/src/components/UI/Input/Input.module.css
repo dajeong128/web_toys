@@ -27,12 +27,10 @@
     padding: 5px;
 }
 
-
 .formInput[type=text]:focus {
     outline: none;
     border: 3px solid #555;
   }
-
   
 .submit {
     background-color: white;
