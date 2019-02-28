@@ -48,19 +48,9 @@ const cartItems = (props) => {
     return (
         <>
             {cartItem}
-            {/* {cartItemTotal} */}
             <CartItemsTotal value={itemList} />
         </>
     )
 }
-   
-
-    // _renderCartList = () => {
-    //     const cartList = this.state.map(cartData => {
-    //         return <CartList name={cartData.name} options={cartData.options} price={cartData.price} shippingPrice={this.state.shippingPrice} />
-    //     })
-    //     return cartList
-    // }
-
 
 export default cartItems
