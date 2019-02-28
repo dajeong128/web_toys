@@ -2,19 +2,20 @@ import React from 'react'
 
 
 const cartItemsTotal = (props) => {
-    // const getdata = [];
-    // const dataPrice = [];
-    console.log(props)
-    // for (let i = 0; i < props.length; i++) {
-    //   if (props.length > 0) {
-    //     getdata.push(props[i].price)
-    //     const addTotal = dataPrice.push(props[i].price)
-    //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    //     console.log(addTotal)
-    //     console.log(dataPrice.reduce(reducer))
-    // }
+    const getdata = [];
+    const dataPrice = [];
+    console.log(props.value.length);
 
+    for (let i = 0; i < props.length; i++) {
+      if (props.length > 0) {
+        getdata.push(props[i].price)
+        const addTotal = dataPrice.push(props[i].price)
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        console.log(addTotal)
+        console.log(dataPrice.reduce(reducer))
+    }
 
+}
     /*금액누적*/
     return(
     <>
