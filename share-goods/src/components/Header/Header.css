@@ -6,10 +6,9 @@ html, body {
     height:60px;
     display: flex;
     justify-content: space-around;
+
   }
 
-
-  
   header ul {
     padding:0;
     margin:0;
@@ -17,15 +16,38 @@ html, body {
   }
   
   header ul li {
+    color:white;
     list-style:none;
     display: inline-block;
     margin-right:20px;
     height:100%;
-    background-color: #ccc;
+    background-color: #aaa;
     padding: 15px;
     font-size:1.1rem;
     font-weight:600;
+    margin: auto;
+    cursor:pointer;
+    padding:15px 10px 15px 10px;
+    font-size:16px;
+    border-bottom:4px solid #aaa;
   }
+
+
+  a:link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:visited {
+    color:white;
+  }
+
+  header ul li:hover {
+    background-color:grey;
+    border-bottom:4px solid #grey;
+
+  }
+
   
   .logo {
     height: 100%;
