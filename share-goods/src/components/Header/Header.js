@@ -13,12 +13,12 @@ const header = () => {
           <li>
             <NavLink to="/">
               상품목록
-                    </NavLink>
+            </NavLink>
           </li>
           <li>
             <NavLink to="/cart">
               장바구니
-                    </NavLink>
+            </NavLink>
           </li>
         </ul>
       </div>
