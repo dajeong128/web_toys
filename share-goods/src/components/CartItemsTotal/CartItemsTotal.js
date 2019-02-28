@@ -1,61 +1,33 @@
 import React from 'react'
+import classes from './CartItemsTotal.module.css'
 
 
 const cartItemsTotal = (props) => {
     const getdata = [];
     const dataPrice = [];
-    console.log(props.value.length);
+    // console.log(props.value.length);
 
-    for (let i = 0; i < props.length; i++) {
-      if (props.length > 0) {
-        getdata.push(props[i].price)
-        const addTotal = dataPrice.push(props[i].price)
+    for (let i = 0; i < props.value.length; i++) {
+
+      if (props.value.length > 0) {
+        var itemPriceTotal=[];
+
+        getdata.push(props.value[i].price)
+        dataPrice.push(props.value[i].price)
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        console.log(addTotal)
-        console.log(dataPrice.reduce(reducer))
+        // console.log(addTotal)
+        // console.log(dataPrice.reduce(reducer))
+        itemPriceTotal.push(dataPrice.reduce(reducer).toLocaleString());
     }
 
 }
     /*금액누적*/
     return(
-    <>
-        <p>합계 : 원</p>
-    </>    
+    <strong className={classes.totalPrice}>
+        합계 : {itemPriceTotal}원
+    </strong>
+    
     )
 }
-//     var price = [];
-//     price.push(`
-//         <div class="grandTotal">
-//           <p>합계 ${dataPrice.reduce(reducer).toLocaleString()}원</p>
-//         </div>
-//       `)
 
-
-//     //   }
-//   }
-//   )
-
-
-
-
-
-//     console.log(props)
-//     // console.log(props.value)
-//     // const price = [];
-//     // price.push(props.value);
-//     // console.log(price);
-    
-//     // const cartPriceTotal = props.map((item, i) => {
-//         return (
-          
-//             <div>
-//                 <p>
-//                     가격 : 원
-//                 </p>
-//             </div>
-
-                  
-//         )
-//     // })
-// }
 export default cartItemsTotal;
