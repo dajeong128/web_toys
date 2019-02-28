@@ -44,10 +44,9 @@ html, body {
 
   header ul li:hover {
     background-color:grey;
-    border-bottom:4px solid grey;
+    border-bottom:4px solid #aaa;
 
   }
-
   
   .logo {
     height: 100%;
