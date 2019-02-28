@@ -23,12 +23,11 @@ const cartItemsTotal = (props) => {
 }
     /*금액누적*/
     return(
-    <strong>
-        <p className={classes.totalPrice}>
-        합계 : {itemPriceTotal}원
-        </p>
-    </strong>
-    
+        <div className={classes.totalPricePlace}>
+            <strong className={classes.totalPrice}>
+                합계 : {itemPriceTotal}원
+            </strong>
+        </div>
     )
 }
 

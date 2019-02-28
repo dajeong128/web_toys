@@ -1,5 +1,9 @@
-.totalPrice{
+.totalPricePlace {
     width:500px;
-    display: flex;
-    margin-bottom:30px;
+    height:50px;
+    margin:auto;
+}
+
+.totalPrice {
+    margin-left:380px;
 }
