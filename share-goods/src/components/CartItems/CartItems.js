@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './CartItems.module.css'
 import Input from '../UI/Input/Input'
 import { FaTrashAlt } from 'react-icons/fa';
+import CartItemsTotal from '../CartItemsTotal/CartItemsTotal'
 
 
 const cartItems = (props) => {
@@ -36,6 +37,7 @@ const cartItems = (props) => {
                             value='0'
                             style={classes.Amount}/>
                         <FaTrashAlt onClick={() => props.deleteItems(item.key, item.id)}/>
+                        <CartItemsTotal value={item.price} />
                     </div>
                 </div>
             )
@@ -44,7 +46,7 @@ const cartItems = (props) => {
     
     return (
         <>
-            {cartItem}    
+            {cartItem}
         </>
     )
 }

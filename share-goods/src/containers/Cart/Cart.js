@@ -4,6 +4,7 @@ import CartItems from '../../components/CartItems/CartItems'
 import axios from '../../axios'
 import classes from './Cart.module.css'
 import Input from '../../components/UI/Input/Input'
+import CartItemsTotal from '../../components/CartItemsTotal/CartItemsTotal'
 
 class Cart extends Component {
 
@@ -48,33 +49,17 @@ class Cart extends Component {
             }
         }
 
-    //     const addTotal = dataPrice.push(value[i].price)
-    //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    //     price.push(`
-    //     <div class="grandTotal">
-    //       <p>합계 ${dataPrice.reduce(reducer).toLocaleString()}원</p>
-    //     </div>
-    //   `)
-
-        // cartItemsTotal = async(key, price) => { 
-        //     const addTotal =[];
-        //     addTotal.push(this.state.cartList[key].price);
-        //     console.log(addTotal);
-        //     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        //     const cartPriceTotal = addTotal.reduce(reducer)
-        //     console.log(cartPriceTotal);
-        // }
 
     render (){
         return (
             <div className={classes.Cart}>
                 <Title title="We hope your good shopping!"/>
                 <CartItems items={this.state.cartList} deleteItems={this.deleteItems}/>
-                {/* <p>{this.cartItemsTotal.toLocaleString()}원</p> */}
                 <div className={classes.formCard}>
                     <h4>Enter your Contact Data</h4>
                     <Input elementType='form' className={classes.Input}/>
                 </div>
+                <CartItemsTotal itemPrice={this.state.cartList.price}/>
             </div>
         
         )
