@@ -4,7 +4,6 @@ import CartItems from '../../components/CartItems/CartItems'
 import axios from '../../axios'
 import classes from './Cart.module.css'
 import Input from '../../components/UI/Input/Input'
-import CartItemsTotal from '../../components/CartItemsTotal/CartItemsTotal'
 
 class Cart extends Component {
 
@@ -59,7 +58,6 @@ class Cart extends Component {
                     <h4>Enter your Contact Data</h4>
                     <Input elementType='form' className={classes.Input}/>
                 </div>
-                <CartItemsTotal itemPrice={this.state.cartList.price}/>
             </div>
         
         )

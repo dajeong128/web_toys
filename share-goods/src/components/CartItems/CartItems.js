@@ -11,16 +11,22 @@ const cartItems = (props) => {
         min: '0',
         max: '100',
     }
-
+    let itemList = [];
     let cartItem;
     if (props.items) {
         const items = {...props.items};
-        let itemList = [];
+
         for (let key in items) {
             items[key].key = key;
             itemList.push(items[key]);
         }
+        // let totalPrice=[];
+        // totalPrice.push(item.price)
+        // console.log(itemList)
+        // const cartItemTotal = <CartItemsTotal value={itemList[key].price} />
+
         cartItem = itemList.map((item, i) => {
+
             return (
                 <div className={classes.cartItemsList} key={i}>
                     <div>
@@ -37,7 +43,7 @@ const cartItems = (props) => {
                             value='0'
                             style={classes.Amount}/>
                         <FaTrashAlt onClick={() => props.deleteItems(item.key, item.id)}/>
-                        <CartItemsTotal value={item.price} />
+                        {/* <CartItemsTotal value={item.price} /> */}
                     </div>
                 </div>
             )
@@ -47,6 +53,8 @@ const cartItems = (props) => {
     return (
         <>
             {cartItem}
+            {/* {cartItemTotal} */}
+            <CartItemsTotal value={itemList} />
         </>
     )
 }
