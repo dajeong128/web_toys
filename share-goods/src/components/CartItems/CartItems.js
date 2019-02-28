@@ -20,10 +20,6 @@ const cartItems = (props) => {
             items[key].key = key;
             itemList.push(items[key]);
         }
-        // let totalPrice=[];
-        // totalPrice.push(item.price)
-        // console.log(itemList)
-        // const cartItemTotal = <CartItemsTotal value={itemList[key].price} />
 
         cartItem = itemList.map((item, i) => {
 
