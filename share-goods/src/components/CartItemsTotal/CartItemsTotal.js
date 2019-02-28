@@ -1,25 +1,22 @@
 import React from 'react'
 import classes from './CartItemsTotal.module.css'
-
+import input from '../UI/Input/Input';
 
 const cartItemsTotal = (props) => {
-    const getdata = [];
-    const dataPrice = [];
-    // console.log(props.value.length);
+    const itemPrice = [];
+    const items = props.value.length;
 
-    for (let i = 0; i < props.value.length; i++) {
+    const itemsPriceXquatity = [];
 
-      if (props.value.length > 0) {
+    for (let i = 0; i < items; i++) {
+      if (items > 0) {
         var itemPriceTotal=[];
-
-        getdata.push(props.value[i].price)
-        dataPrice.push(props.value[i].price)
+        itemPrice.push(props.value[i].price)
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        // console.log(addTotal)
-        // console.log(dataPrice.reduce(reducer))
-        itemPriceTotal.push(dataPrice.reduce(reducer).toLocaleString());
-    }
+        itemPriceTotal.push(itemPrice.reduce(reducer).toLocaleString());
 
+        itemsPriceXquatity.push((props.value[i].price) *  input.value)
+    }
 }
     /*금액누적*/
     return(

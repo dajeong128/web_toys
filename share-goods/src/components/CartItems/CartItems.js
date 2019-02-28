@@ -10,6 +10,7 @@ const cartItems = (props) => {
         type : 'number',
         min: '0',
         max: '100',
+        value:''
     }
     let itemList = [];
     let cartItem;
@@ -43,12 +44,13 @@ const cartItems = (props) => {
                 </div>
             )
         })
+        console.log(elementConfig.value)
     }
     
     return (
         <>
             {cartItem}
-            <CartItemsTotal value={itemList} />
+            <CartItemsTotal value={itemList} inputValue={elementConfig}/>
         </>
     )
 }
