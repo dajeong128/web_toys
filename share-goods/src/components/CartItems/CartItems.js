@@ -43,7 +43,6 @@ const cartItems = (props) => {
                             value='0'
                             style={classes.Amount}/>
                         <FaTrashAlt onClick={() => props.deleteItems(item.key, item.id)}/>
-                        {/* <CartItemsTotal value={item.price} /> */}
                     </div>
                 </div>
             )
