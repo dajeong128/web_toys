@@ -18,6 +18,7 @@ class ProductList extends Component {
   data.options = typeof data.options === 'object' ? 
   `${data.options.color} ${data.options.size}`: 
   data.options;
+  data.quantity = 1;
   
    axios.post('cart.json', data)
     .then(res => {

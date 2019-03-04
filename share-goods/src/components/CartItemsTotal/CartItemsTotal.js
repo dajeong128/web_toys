@@ -3,26 +3,32 @@ import classes from './CartItemsTotal.module.css'
 import input from '../UI/Input/Input';
 
 const cartItemsTotal = (props) => {
-    const itemPrice = [];
-    const items = props.value.length;
+    // console.log(props)
+    // const items = props.value.length;
 
-    const itemsPriceXquatity = [];
+    // const itemsPriceQuantity = [];
 
-    for (let i = 0; i < items; i++) {
-      if (items > 0) {
-        var itemPriceTotal=[];
-        itemPrice.push(props.value[i].price)
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        itemPriceTotal.push(itemPrice.reduce(reducer).toLocaleString());
+    // const itemPriceTotal=[];
+    // const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-        itemsPriceXquatity.push((props.value[i].price) *  input.value)
-    }
-}
-    /*금액누적*/
+    // for (let i = 0; i < items; i++) {
+    //     if (items > 0) {
+    //         const itemPrice = [];
+
+    //         itemPrice.push(props.value[i].price)
+    //         itemPrice.push(props.value[i].shippingPrice)
+    //         itemPriceTotal.push(itemPrice.reduce(reducer));
+
+    //         itemsPriceQuantity.push((props.value[i].price) *  input.value)
+    //     }
+    // }
+
+    // const totalPrice = itemPriceTotal.length > 0 ? itemPriceTotal.reduce(reducer).toLocaleString() : 0;
+
     return(
         <div className={classes.totalPricePlace}>
             <strong className={classes.totalPrice}>
-                합계 : {itemPriceTotal}원
+                합계 : {props.totalPrice.toLocaleString()}원
             </strong>
         </div>
     )

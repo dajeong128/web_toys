@@ -4,16 +4,21 @@ import Input from '../UI/Input/Input'
 import { FaTrashAlt } from 'react-icons/fa';
 import CartItemsTotal from '../CartItemsTotal/CartItemsTotal'
 
+    const cartItems = (props) => {
+        console.log(props)
 
-const cartItems = (props) => {
-    let elementConfig = {
-        type : 'number',
-        min: '0',
-        max: '100',
-        value:''
-    }
+        let elementConfig = {
+            type : 'number',
+            defaultValue: '1',
+            min: '0',
+            max: '100',
+        }
+
+
     let itemList = [];
     let cartItem;
+    let totalPrice = 0;
+
     if (props.items) {
         const items = {...props.items};
 
@@ -22,8 +27,9 @@ const cartItems = (props) => {
             itemList.push(items[key]);
         }
 
+        
         cartItem = itemList.map((item, i) => {
-
+            totalPrice += item.price * item.quantity + item.shippingPrice;
             return (
                 <div className={classes.cartItemsList} key={i}>
                     <div>
@@ -34,25 +40,32 @@ const cartItems = (props) => {
                         </p>
                     </div>
                     <div>
-                        <Input 
+                        <Input
                             elementType='input'
                             elementConfig={elementConfig}
-                            value='0'
-                            style={classes.Amount}/>
+                            // value='0'
+                            style={classes.Amount}
+                            changed={(e) => props.updateItemQuantity(e, item.key)}
+                            // onChange={this.handle.bind(this)}
+                            />
                         <FaTrashAlt onClick={() => props.deleteItems(item.key, item.id)}/>
                     </div>
                 </div>
             )
         })
-        console.log(elementConfig.value)
-    }
-    
+        // console.log(elementConfig.value)
     return (
         <>
             {cartItem}
-            <CartItemsTotal value={itemList} inputValue={elementConfig}/>
+            {/* <CartItemsTotal /> */}
+            {/* <CartItemsTotal value={itemList} inputValue={elementConfig}/> */}
+            { totalPrice.toLocaleString() }
+            {/* <CartItemsTotal totalPrice={totalPrice}/> */}
+
         </>
     )
+    }  
 }
+
 
 export default cartItems

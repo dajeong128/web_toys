@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Input.module.css'
 
+
 const input = (props) => {
     switch (props.elementType) { 
         case 'input' :
@@ -9,8 +10,9 @@ const input = (props) => {
                     className={props.style}
                     {...props.elementConfig}
                     value={props.value}
+                    // onChange={props.changed}
                     onChange={props.changed}
-                />
+                    />
             )
         case 'select' :
             return (
@@ -42,6 +44,7 @@ const input = (props) => {
             )
         default: break;
     }
+
 }
 
 export default input;
