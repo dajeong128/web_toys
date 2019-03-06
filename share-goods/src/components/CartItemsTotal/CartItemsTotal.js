@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './CartItemsTotal.module.css'
-import input from '../UI/Input/Input';
 
 const cartItemsTotal = (props) => {
     // console.log(props)

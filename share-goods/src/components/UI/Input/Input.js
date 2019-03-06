@@ -31,18 +31,18 @@ const input = (props) => {
                 </select>
             )
 
-        case 'form' : 
-            return (
-                <form className={classes.form}>
-                    <input className={classes.formInput} type="text" placeholder="Your Name" ></input>
-                    <input className={classes.formInput} type="text" placeholder="Street"></input>
-                    <input className={classes.formInput} type="text" placeholder="ZIP Code"></input>
-                    <input className={classes.formInput} type="text" placeholder="Country"></input>
-                    <input className={classes.formInput} type="text" placeholder="Your Email"></input>
-                    <button className={classes.submit} type="button">ORDER</button>
-                </form>
-            )
-        default: break;
+        // case 'form' : 
+        //     return (
+        //         <form className={classes.form}>
+        //             <input className={classes.formInput} type="text" placeholder="Your Name" ></input>
+        //             <input className={classes.formInput} type="text" placeholder="Street"></input>
+        //             <input className={classes.formInput} type="text" placeholder="ZIP Code"></input>
+        //             <input className={classes.formInput} type="text" placeholder="Country"></input>
+        //             <input className={classes.formInput} type="text" placeholder="Your Email"></input>
+        //             <button className={classes.submit} type="button">ORDER</button>
+        //         </form>
+        //     )
+        // default: break;
     }
 
 }

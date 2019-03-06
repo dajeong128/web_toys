@@ -1,0 +1,39 @@
+.form {
+    width:450px;
+}
+
+.formInput {
+    width:90%;
+    height:23px;
+    display: block;
+    margin: 5px 40px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.formInput[type=text]:focus {
+    outline: none;
+    border: 3px solid #555;
+  }
+  
+.submit {
+    background-color: white;
+    border:1px solid #ccc;
+    color: grey;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-top:5px;
+    margin-left:43px;
+    opacity: 0.5;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+  .submit:hover {
+    background-color:black;
+    color:white;
+    opacity: 1
+  }

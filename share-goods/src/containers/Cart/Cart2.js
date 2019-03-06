@@ -3,7 +3,7 @@ import Title from '../../components/Title/Title'
 import CartItems from '../../components/CartItems/CartItems'
 import axios from '../../axios'
 import classes from './Cart.module.css'
-import InputForm from '../InputForm/InputForm'
+import Input from '../../components/UI/Input/Input'
 
 class Cart extends Component {
 
@@ -26,10 +26,6 @@ class Cart extends Component {
         _callAPI = async () => {
             const { data } = await axios.get('/cart.json');
             return data;
-        //    fetch('https://goods-204a7.firebaseio.com/cart.json')
-        //    .then(res => res.json())
-        //    .then(json => cartData.push(json))
-        //    .catch(err => console.log(err))
        }
 
         deleteItems = async(key, id) => {
@@ -58,25 +54,7 @@ class Cart extends Component {
                 cartList
             })
             console.log(this.state.cartList);
-
-            
-            // const cartItems={};
-            // const cartItemsAddQunatity;
-            // cartItems.push(this.cartList)
-            // for(let key in this.state.cartList) {
-            //     if (this.state.cartList[key] == cartItems[key]) {
-            //         cartItems.push()
-            //     }
-            // }
-            // this.setState ({
-            //     cartList
-            // })
         }
-
-        // order = async () => {
-        //     await axios.post('order', this.state.cartList);
-        // }
-
 
     render (){
         return (
@@ -85,11 +63,8 @@ class Cart extends Component {
                 <CartItems items={this.state.cartList} deleteItems={this.deleteItems} updateItemQuantity={this.updateItemQuantity}/>
                 <div className={classes.formCard}>
                     <h4>Enter your Contact Data</h4>
-                    <InputForm className={classes.InputForm}/>
+                    <Input elementType='form' className={classes.Input}/>
                 </div>
-                {/* <button onClick={order}>
-                    주문하기
-                </button> */}
             </div>
         )
     }
