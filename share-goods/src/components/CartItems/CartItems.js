@@ -14,7 +14,6 @@ import CartItemsTotal from '../CartItemsTotal/CartItemsTotal'
             max: '100',
         }
 
-
     let itemList = [];
     let cartItem;
     let totalPrice = 0;
@@ -26,7 +25,6 @@ import CartItemsTotal from '../CartItemsTotal/CartItemsTotal'
             items[key].key = key;
             itemList.push(items[key]);
         }
-
         
         cartItem = itemList.map((item, i) => {
             totalPrice += item.price * item.quantity + item.shippingPrice;
@@ -59,8 +57,7 @@ import CartItemsTotal from '../CartItemsTotal/CartItemsTotal'
             {cartItem}
             {/* <CartItemsTotal /> */}
             {/* <CartItemsTotal value={itemList} inputValue={elementConfig}/> */}
-            { totalPrice.toLocaleString() }
-            {/* <CartItemsTotal totalPrice={totalPrice}/> */}
+            <CartItemsTotal totalPrice={totalPrice}/>
 
         </>
     )
